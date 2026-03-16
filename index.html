@@ -599,6 +599,50 @@
     from { top: 0; }
     to { top: 100vh; }
   }
+
+  .agent-chip { cursor: pointer; }
+  .modal-overlay {
+    display: none; position: fixed; inset: 0;
+    background: #060810cc; backdrop-filter: blur(6px);
+    z-index: 1000; align-items: center; justify-content: center;
+  }
+  .modal-overlay.open { display: flex; }
+  .modal {
+    background: #0C0F1A; border: 1px solid #00E5FF55;
+    border-radius: 14px; padding: 2rem; max-width: 500px; width: 90%;
+    position: relative; box-shadow: 0 0 40px #00E5FF22;
+    animation: modal-in 0.2s ease;
+  }
+  @keyframes modal-in {
+    from { opacity: 0; transform: scale(0.95) translateY(10px); }
+    to { opacity: 1; transform: scale(1) translateY(0); }
+  }
+  .modal::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px;
+    background: linear-gradient(135deg, #00E5FF, #2979FF, #651FFF);
+    border-radius: 14px 14px 0 0;
+  }
+  .modal-close {
+    position: absolute; top: 1rem; right: 1rem; background: none;
+    border: 1px solid #2979FF33; border-radius: 4px; color: #2979FF88;
+    font-family: 'Orbitron', monospace; font-size: 0.6rem;
+    padding: 0.25rem 0.5rem; cursor: pointer; letter-spacing: 0.1em;
+  }
+  .modal-close:hover { border-color: #00E5FF; color: #00E5FF; }
+  .modal-agent-name {
+    font-family: 'Orbitron', monospace; font-size: 1rem; font-weight: 900;
+    background: linear-gradient(90deg, #00E5FF 0%, #2979FF 50%, #651FFF 100%);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    background-clip: text; margin-bottom: 0.3rem; padding-right: 3rem;
+  }
+  .modal-tier { font-size: 0.65rem; color: #2979FF88; font-family: 'Orbitron', monospace; letter-spacing: 0.12em; margin-bottom: 1.25rem; }
+  .modal-section-label { font-family: 'Orbitron', monospace; font-size: 0.6rem; color: #2979FF66; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 0.5rem; margin-top: 1rem; }
+  .modal-skills { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+  .skill-tag { background: #00E5FF0F; border: 1px solid #00E5FF33; border-radius: 4px; padding: 0.2rem 0.5rem; font-size: 0.62rem; color: #00E5FF; font-family: 'Rajdhani', sans-serif; font-weight: 600; }
+  .modal-responsibilities { list-style: none; padding: 0; }
+  .modal-responsibilities li { font-size: 0.8rem; color: #ffffffcc; font-family: 'Rajdhani', sans-serif; padding: 0.3rem 0 0.3rem 1rem; border-bottom: 1px solid #ffffff08; position: relative; }
+  .modal-responsibilities li::before { content: '›'; position: absolute; left: 0; color: #00E5FF; font-weight: 700; }
+  .modal-responsibilities li:last-child { border-bottom: none; }
 </style>
 </head>
 <body>
@@ -1035,18 +1079,18 @@
       <span class="badge live">AUTO-EXECUTE</span>
     </div>
     <div class="agent-grid">
-      <div class="agent-chip"><span class="dot green"></span>System Architect</div>
-      <div class="agent-chip"><span class="dot green"></span>Audit</div>
-      <div class="agent-chip"><span class="dot green"></span>Backend Build</div>
-      <div class="agent-chip"><span class="dot green"></span>Frontend / UI</div>
-      <div class="agent-chip"><span class="dot green"></span>Smart Contract</div>
-      <div class="agent-chip"><span class="dot green"></span>Database</div>
-      <div class="agent-chip"><span class="dot green"></span>Compliance</div>
-      <div class="agent-chip"><span class="dot green"></span>Security</div>
-      <div class="agent-chip"><span class="dot green"></span>Testing / QA</div>
-      <div class="agent-chip"><span class="dot green"></span>Documentation</div>
-      <div class="agent-chip"><span class="dot green"></span>Approval Gate</div>
-      <div class="agent-chip"><span class="dot green"></span>Backup / Sync</div>
+      <div class="agent-chip" onclick="openAgent('system-architect')"><span class="dot green"></span>System Architect</div>
+      <div class="agent-chip" onclick="openAgent('audit')"><span class="dot green"></span>Audit</div>
+      <div class="agent-chip" onclick="openAgent('backend-build')"><span class="dot green"></span>Backend Build</div>
+      <div class="agent-chip" onclick="openAgent('frontend-ui')"><span class="dot green"></span>Frontend / UI</div>
+      <div class="agent-chip" onclick="openAgent('smart-contract')"><span class="dot green"></span>Smart Contract</div>
+      <div class="agent-chip" onclick="openAgent('database')"><span class="dot green"></span>Database</div>
+      <div class="agent-chip" onclick="openAgent('compliance')"><span class="dot green"></span>Compliance</div>
+      <div class="agent-chip" onclick="openAgent('security')"><span class="dot green"></span>Security</div>
+      <div class="agent-chip" onclick="openAgent('testing-qa')"><span class="dot green"></span>Testing / QA</div>
+      <div class="agent-chip" onclick="openAgent('documentation')"><span class="dot green"></span>Documentation</div>
+      <div class="agent-chip" onclick="openAgent('approval-gate')"><span class="dot green"></span>Approval Gate</div>
+      <div class="agent-chip" onclick="openAgent('backup-sync')"><span class="dot green"></span>Backup / Sync</div>
     </div>
     <div class="stat-row">
       <div class="stat"><div class="stat-num">27</div><div class="stat-label">Games Built</div></div>
@@ -1058,6 +1102,18 @@
 
 </div>
 
+
+<div class="modal-overlay" id="agent-modal" onclick="closeAgentModal(event)">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal()">ESC</button>
+    <div class="modal-agent-name" id="modal-name"></div>
+    <div class="modal-tier" id="modal-tier"></div>
+    <div class="modal-section-label">Skills</div>
+    <div class="modal-skills" id="modal-skills"></div>
+    <div class="modal-section-label">Responsibilities</div>
+    <ul class="modal-responsibilities" id="modal-resp"></ul>
+  </div>
+</div>
 <footer>FSL · Future Systems Lab · Where Mental Wellness Meets Metaverse · Rights Reserved, Unlicensed</footer>
 
 <script>
@@ -1070,6 +1126,167 @@
   }
   updateClock()
   setInterval(updateClock, 1000)
+</script>
+<script>
+  const AGENTS = {
+    'system-architect': {
+      name: 'System Architect',
+      tier: 'TIER 1 — AUTO-APPROVE · ORCHESTRATION LAYER',
+      skills: ['FSL Architecture','Monorepo Structure','Build Order','Phase Planning','Cross-system Integration'],
+      responsibilities: [
+        'Owns the canonical 19-step EncryptAI build order',
+        'Designs cross-system integration patterns between HypnoNeuro, EncryptHealth, ClaimChain, and Watch',
+        'Reviews all architectural decisions before implementation agents proceed',
+        'Maintains CLAUDE.md and BUILD_LOG.md as source of truth',
+        'Resolves conflicts between agent outputs at the system level'
+      ]
+    },
+    'audit': {
+      name: 'Audit',
+      tier: 'TIER 1 — READ-ONLY · MANDATORY PRE-WRITE',
+      skills: ['Git Diff Analysis','Branch Verification','Placeholder Detection','Regression Check','Credential Scan'],
+      responsibilities: [
+        'Runs mandatory read-only audit before any write operation',
+        'Verifies correct git branch and clean working tree',
+        'Confirms all placeholders replaced with real values',
+        'Scans for regressed code patterns from previous steps',
+        'Outputs AUDIT_REPORT.md — build halts if audit fails'
+      ]
+    },
+    'backend-build': {
+      name: 'Backend Build',
+      tier: 'TIER 2 — APPROVAL-GATED · BUILD LAYER',
+      skills: ['Node.js','Express','REST API','PostgreSQL','Web3.py','Sepolia RPC'],
+      responsibilities: [
+        'Builds and maintains all Node.js/Express API services',
+        'Implements health records API for EncryptHealth Step 3',
+        'Manages Infura RPC connections to Sepolia testnet',
+        'Writes blockchain anchoring logic for on-chain health records',
+        'Coordinates with Database agent on schema and query layer'
+      ]
+    },
+    'frontend-ui': {
+      name: 'Frontend / UI',
+      tier: 'TIER 2 — APPROVAL-GATED · BUILD LAYER',
+      skills: ['Next.js','React','Tailwind','wagmi','viem','FSL Brand System'],
+      responsibilities: [
+        'Builds all Next.js/React frontend components across FSL products',
+        'Enforces FSL brand: HypnoNeuro aqua/mint, EncryptHealth FSL blue',
+        'Implements MetaMask wallet connection via wagmi + injected() connector',
+        'Deploys all frontends to Vercel with production aliases',
+        'Owns HypnoNeuro game UI and all 27 browser-based game interfaces'
+      ]
+    },
+    'smart-contract': {
+      name: 'Smart Contract',
+      tier: 'TIER 2 — APPROVAL-GATED · BUILD LAYER',
+      skills: ['Solidity','Hardhat','OpenZeppelin','ERC-20','ERC-721','Sepolia'],
+      responsibilities: [
+        'Writes and deploys all FSL Solidity contracts to Sepolia',
+        'Maintains canonical contract addresses across all 5 deployed contracts',
+        'Implements HNT/EHT token logic and MindMasteryNFT (L1–L3)',
+        'Manages ClaimChain sovereign governance contract',
+        'Verifies all contracts on Blockscout after deployment'
+      ]
+    },
+    'database': {
+      name: 'Database',
+      tier: 'TIER 2 — APPROVAL-GATED · BUILD LAYER',
+      skills: ['PostgreSQL','Schema Design','SQL','Migration Scripts','FHIR Alignment'],
+      responsibilities: [
+        'Owns all PostgreSQL schema design across FSL systems',
+        'Maintains clawdbot_archive DB with three-table structure',
+        'Writes schema.sql and lifecycle_extension.sql for ClaimChain',
+        'Ensures no placeholder IDs — real patient/provider records tracked',
+        'Coordinates schema merges between ClaimChain and EncryptHealth'
+      ]
+    },
+    'compliance': {
+      name: 'Compliance',
+      tier: 'TIER 1 — AUTO-APPROVE · OVERSIGHT LAYER',
+      skills: ['Digital Health Compliance','Web3 Governance','FHIR','Sovereign Health Law','Disclaimer Language'],
+      responsibilities: [
+        'Ensures neutral clinical terminology throughout all FSL products',
+        'Frames all health protocols around neurotransmitter systems, not diagnoses',
+        'Reviews all patient-facing copy for educational disclaimer compliance',
+        'Maintains ClaimChain as sovereign health governance (not medical/insurance)',
+        'Flags any agent output that introduces diagnostic or pharmaceutical framing'
+      ]
+    },
+    'security': {
+      name: 'Security',
+      tier: 'TIER 1 — AUTO-APPROVE · OVERSIGHT LAYER',
+      skills: ['Credential Scanning','Private Key Safety','VPN Policy','Repo Visibility','Smart Contract Audit'],
+      responsibilities: [
+        'Scans all commits for exposed credentials, keys, or tokens',
+        'Enforces Rights Reserved, Unlicensed on all code files',
+        'Monitors private repo policy — ClawdBot never public',
+        'Reviews smart contract logic for common Solidity vulnerabilities',
+        'Ensures deployer wallet private key never appears in any file or log'
+      ]
+    },
+    'testing-qa': {
+      name: 'Testing / QA',
+      tier: 'TIER 2 — APPROVAL-GATED · BUILD LAYER',
+      skills: ['Hardhat Tests','API Testing','End-to-End','Contract Verification','Regression Testing'],
+      responsibilities: [
+        'Writes Hardhat test suites for all smart contracts before mainnet consideration',
+        'Runs API endpoint tests after each Backend Build agent deployment',
+        'Verifies MetaMask connection flow across all supported browsers',
+        'Tests all 27 HypnoNeuro games for functional completion',
+        'Blocks deployment if any test suite fails — reports to Approval Gate'
+      ]
+    },
+    'documentation': {
+      name: 'Documentation',
+      tier: 'TIER 1 — AUTO-APPROVE · SUPPORT LAYER',
+      skills: ['README Writing','BUILD_LOG','API Docs','DEng Framing','GitHub Profile'],
+      responsibilities: [
+        'Maintains BUILD_LOG.md after every completed step',
+        'Writes and updates all GitHub README files per NeuroBalance Watch template',
+        'Documents all API endpoints with real values — no placeholders',
+        'Frames FSL build artifacts for ASU DEng applied project documentation',
+        'Keeps FSL GitHub profile README and CV page current'
+      ]
+    },
+    'approval-gate': {
+      name: 'Approval Gate',
+      tier: 'TIER 1 — HUMAN-IN-LOOP · CONTROL LAYER',
+      skills: ['Telegram Bot','Approve/Deny/Defer','Case-insensitive Parsing','Audit Trail','Build Halt'],
+      responsibilities: [
+        'Intercepts all Tier 2 agent actions before file writes',
+        'Sends approval requests to Telegram bot FSL_Agent_Gateway_Bot',
+        'Accepts case-insensitive approve / deny / defer commands',
+        'Logs all decisions to clawdbot_archive PostgreSQL DB',
+        'Halts build pipeline on deny — resumes on next approve signal'
+      ]
+    },
+    'backup-sync': {
+      name: 'Backup / Sync',
+      tier: 'TIER 1 — AUTO-APPROVE · INFRASTRUCTURE LAYER',
+      skills: ['Git Push','BackupArchiveContract','Sepolia Anchoring','Cron Jobs','Output Archival'],
+      responsibilities: [
+        'Auto-pushes all agent outputs to backup-archive repo after approval',
+        'Anchors build milestones to BackupArchiveContract on Sepolia',
+        'Runs daily summary cron at 3:33 AM UTC via clawdbot-campaign.service',
+        'Syncs Command Center HTML to VPS nginx on every deploy',
+        'Maintains output history in PostgreSQL archive table'
+      ]
+    }
+  };
+
+  function openAgent(id) {
+    const a = AGENTS[id];
+    if (!a) return;
+    document.getElementById('modal-name').textContent = a.name;
+    document.getElementById('modal-tier').textContent = a.tier;
+    document.getElementById('modal-skills').innerHTML = a.skills.map(s => `<span class="skill-tag">${s}</span>`).join('');
+    document.getElementById('modal-resp').innerHTML = a.responsibilities.map(r => `<li>${r}</li>`).join('');
+    document.getElementById('agent-modal').classList.add('open');
+  }
+  function closeModal() { document.getElementById('agent-modal').classList.remove('open'); }
+  function closeAgentModal(e) { if (e.target.id === 'agent-modal') closeModal(); }
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
 </script>
 </body>
 </html>
