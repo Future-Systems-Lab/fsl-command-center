@@ -1,5 +1,5 @@
 {
-  "updated": "2026-03-17",
+  "updated": "2026-03-16",
   "projects": {
     "hypnoneuro": {
       "title": "🧠 HypnoNeuro",
@@ -13,44 +13,39 @@
         "Payment flow spec locked: Insurance → ClaimChain, Fiat → Stripe, Crypto → MetaMask",
         "Symptom checklist and neurotransmitter system selection spec locked",
         "27-game spec locked: 9 L1 Hypnosis, 9 L2 Orthomolecular, 9 L3 Inner-Child",
-        "L1 Game 1 (Threshold Bloom — GABA/mandala breathing) built and live",
-        "vercel.json routing fix applied — all 27 game routes resolve",
+        "L1 Game 1 (Threshold Bloom — GABA/mandala breathing) spec locked",
         "Games 2–9 dispatched to agents"
       ],
       "next": [
+        "Build Threshold Bloom (L1 Game 1) — GABA mandala breathing game",
         "Build Games 2–9 L1 Hypnosis",
         "Build L2 Orthomolecular games (9)",
         "Build L3 Inner-Child Healing games (9)"
       ],
       "links": [
         { "label": "Frontend", "url": "https://hypnoneuro-frontend.vercel.app" },
-        { "label": "Threshold Bloom", "url": "https://hypnoneuro-frontend.vercel.app/game/threshold-bloom" },
-        { "label": "HNT Token", "url": "https://eth-sepolia.blockscout.com/address/0x1ae1e10929f008d1f9883ce574a318abd86084e2" },
+        { "label": "HNT Token", "url": "https://eth-sepolia.blockscout.com/address/0x411426f8E735F7940B20491609F08817A805b198" },
         { "label": "MindMastery NFT", "url": "https://eth-sepolia.blockscout.com/address/0xCb9EcB00574DB29976c7C54045d443666D5C7771" }
       ]
     },
     "encrypthealth": {
       "title": "🔐 EncryptHealth",
       "status": "building",
-      "summary": "Sovereign health data platform. EHT token. PostgreSQL backend. Blockchain-anchored health records. 19-step build — Steps 1–6 complete.",
+      "summary": "Sovereign health data platform. EHT token. PostgreSQL backend. Blockchain-anchored health records. 19-step build — currently on Step 3.",
       "completed": [
         "EncryptHealthToken (EHT) deployed and verified on Sepolia",
         "MetaMask login live on Vercel (Step 2 complete)",
+        "PostgreSQL backend live on VPS",
         "EncryptAI monorepo scaffolded (Step 1 complete)",
-        "CLAUDE.md + BUILD_LOG.md + fsl-audit.sh in place",
-        "Step 3 — Wellness API live on VPS port 4001 via PM2",
-        "Step 4 — Unified PostgreSQL schema: public + claimchain schemas merged, hypnoneuro_sessions bridge table",
-        "Step 5 — Blockchain writes live: wellness records SHA-256 anchored to Sepolia, tx_hash returned",
-        "Step 6 — HNT mint engine live: /api/mint endpoint, triggers on session/game/wellness_record, logs to mint_logs table"
+        "CLAUDE.md + BUILD_LOG.md + fsl-audit.sh in place"
       ],
       "next": [
-        "Step 7 — Build L1 Hypnosis UI",
-        "Step 8 — Build L2 Orthomolecular Pattern UI",
-        "Step 9 — Build L3 Inner-Child Healing Game",
-        "Wire Anthropic API + Codex CLI into build pipeline"
+        "Step 3 — Build health records API (Node.js + Express)",
+        "Step 4 — PostgreSQL schema integration (ClaimChain + EncryptHealth merge)",
+        "Step 5 — Blockchain writes (SHA-256 anchoring to Sepolia)",
+        "Step 6 — Token/NFT engine"
       ],
       "links": [
-        { "label": "Wellness API", "url": "http://74.208.202.239:4001/api/status" },
         { "label": "MetaMask Login", "url": "https://secure-health-login-dfk6unk2d-megs-projects-95a11e5b.vercel.app/" },
         { "label": "EHT Token", "url": "https://eth-sepolia.blockscout.com/address/0xbDaeb1d05E02D2751Ad07121510b5f0C436E2CdC" }
       ]
@@ -128,8 +123,7 @@
         "Daily summary cron at 3:33 AM UTC",
         "BackupArchiveContract deployed to Sepolia",
         "backup-archive repo auto-push active",
-        "Infura Sepolia RPC configured",
-        "HypnoNeuroToken v2 redeployed with mint() — 0x1ae1e10929f008d1f9883ce574a318abd86084e2"
+        "Infura Sepolia RPC configured"
       ],
       "next": [
         "Add Anthropic API key to Mac ~/.zshrc",
