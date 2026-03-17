@@ -1,0 +1,139 @@
+{
+  "updated": "2026-03-16",
+  "projects": {
+    "hypnoneuro": {
+      "title": "🧠 HypnoNeuro",
+      "status": "building",
+      "summary": "Gamified decentralized mental wellness platform. 27 browser-based games across 3 levels. MetaMask-gated. Token + NFT reward model.",
+      "completed": [
+        "HypnoNeuroToken (HNT) deployed and verified on Sepolia",
+        "MindMasteryNFT (L1–L3) deployed and verified on Sepolia",
+        "Frontend live on Vercel",
+        "MetaMask wallet gate active",
+        "Payment flow spec locked: Insurance → ClaimChain, Fiat → Stripe, Crypto → MetaMask",
+        "Symptom checklist and neurotransmitter system selection spec locked",
+        "27-game spec locked: 9 L1 Hypnosis, 9 L2 Orthomolecular, 9 L3 Inner-Child",
+        "L1 Game 1 (Threshold Bloom — GABA/mandala breathing) spec locked",
+        "Games 2–9 dispatched to agents"
+      ],
+      "next": [
+        "Build Threshold Bloom (L1 Game 1) — GABA mandala breathing game",
+        "Build Games 2–9 L1 Hypnosis",
+        "Build L2 Orthomolecular games (9)",
+        "Build L3 Inner-Child Healing games (9)"
+      ],
+      "links": [
+        { "label": "Frontend", "url": "https://hypnoneuro-frontend.vercel.app" },
+        { "label": "HNT Token", "url": "https://eth-sepolia.blockscout.com/address/0x411426f8E735F7940B20491609F08817A805b198" },
+        { "label": "MindMastery NFT", "url": "https://eth-sepolia.blockscout.com/address/0xCb9EcB00574DB29976c7C54045d443666D5C7771" }
+      ]
+    },
+    "encrypthealth": {
+      "title": "🔐 EncryptHealth",
+      "status": "building",
+      "summary": "Sovereign health data platform. EHT token. PostgreSQL backend. Blockchain-anchored health records. 19-step build — currently on Step 3.",
+      "completed": [
+        "EncryptHealthToken (EHT) deployed and verified on Sepolia",
+        "MetaMask login live on Vercel (Step 2 complete)",
+        "PostgreSQL backend live on VPS",
+        "EncryptAI monorepo scaffolded (Step 1 complete)",
+        "CLAUDE.md + BUILD_LOG.md + fsl-audit.sh in place"
+      ],
+      "next": [
+        "Step 3 — Build health records API (Node.js + Express)",
+        "Step 4 — PostgreSQL schema integration (ClaimChain + EncryptHealth merge)",
+        "Step 5 — Blockchain writes (SHA-256 anchoring to Sepolia)",
+        "Step 6 — Token/NFT engine"
+      ],
+      "links": [
+        { "label": "MetaMask Login", "url": "https://secure-health-login-dfk6unk2d-megs-projects-95a11e5b.vercel.app/" },
+        { "label": "EHT Token", "url": "https://eth-sepolia.blockscout.com/address/0xbDaeb1d05E02D2751Ad07121510b5f0C436E2CdC" }
+      ]
+    },
+    "claimchain": {
+      "title": "⛓ ClaimChain",
+      "status": "live",
+      "summary": "Sovereign health governance infrastructure. Tracks on-chain session billing, provider attestations, HypnoNeuro session credits. NOT a medical or insurance system.",
+      "completed": [
+        "ClaimChain contract deployed and verified on Sepolia",
+        "PostgreSQL backend live (schema.sql + lifecycle_extension.sql)",
+        "Node API live on VPS",
+        "Session billing on-chain",
+        "Approval gate via Telegram active (approve/deny/defer)",
+        "Phase 3 Slice 1 + Slice 2 complete",
+        "Branch wip/claimchain-phase3-expansion"
+      ],
+      "next": [
+        "Frontend deploy to Vercel",
+        "Wire ClaimChain eligibility check into HypnoNeuro payment flow",
+        "Provider attestation UI"
+      ],
+      "links": [
+        { "label": "Contract", "url": "https://eth-sepolia.blockscout.com/address/0xf32979200768e8726d5EC5E5AB0CA7407d64A94e" }
+      ]
+    },
+    "neurobalance": {
+      "title": "⌚ NeuroBalance Watch",
+      "status": "building",
+      "summary": "Wearable prototype concept with neurotransmitter dashboards and on-chain consent toggles. Plant ally recommendations. Vercel deploy pending.",
+      "completed": [
+        "Neurotransmitter dashboard UI built",
+        "Plant ally recommendations active",
+        "On-chain consent toggle active",
+        "Prototype deployed to Vercel"
+      ],
+      "next": [
+        "Connect watch simulator to EncryptHealth API",
+        "Wire HRV data → blockchain writes",
+        "Connect watch events to L1–L3 game launch"
+      ],
+      "links": [
+        { "label": "Prototype", "url": "https://neurobalance-deploy.vercel.app" }
+      ]
+    },
+    "alchemistforge": {
+      "title": "🔮 AlchemistForge",
+      "status": "live",
+      "summary": "On-chain shadow work platform. Dr. Meg is Case Study Participant #1. Shadow aspect transmuted and celebrated on Sepolia.",
+      "completed": [
+        "Contract deployed to Sepolia",
+        "Dr. Meg onboarded as Case Study Participant #1",
+        "Shadow aspect recorded: web2 shadows → web3 light",
+        "Transmuted event confirmed on-chain",
+        "Celebrated event confirmed on-chain",
+        "LinkedIn updated: Open Source Case Study Lead"
+      ],
+      "next": [
+        "Publish America Out Loud article — swap placeholder URL in README after publish",
+        "Onboard additional case study participants"
+      ],
+      "links": [
+        { "label": "Contract", "url": "https://eth-sepolia.blockscout.com/address/0xE092336F8f5082e57CcBb341A110C20ad186A324" }
+      ]
+    },
+    "infrastructure": {
+      "title": "🖥 Infrastructure",
+      "status": "live",
+      "summary": "OpenClaw VPS, PostgreSQL, Sepolia testnet, Vercel deployments, 12-agent FSL Agent Gateway, Telegram approval gate, daily cron.",
+      "completed": [
+        "OpenClaw VPS live at 74.208.202.239",
+        "PostgreSQL initialized — clawdbot_archive DB with 3 tables",
+        "12-agent FSL Agent Gateway running as systemd service",
+        "Telegram approval bot FSL_Agent_Gateway_Bot live (CHAT_ID 5996868018)",
+        "Daily summary cron at 3:33 AM UTC",
+        "BackupArchiveContract deployed to Sepolia",
+        "backup-archive repo auto-push active",
+        "Infura Sepolia RPC configured"
+      ],
+      "next": [
+        "Add Anthropic API key to Mac ~/.zshrc",
+        "Wire Codex CLI into build pipeline",
+        "Add engineering school Discord/channels to marketing automation after enrollment"
+      ],
+      "links": [
+        { "label": "Deployer", "url": "https://eth-sepolia.blockscout.com/address/0xf22cbF25deEeA36FFF828BAf73CCb049345eF248" },
+        { "label": "Command Center", "url": "https://fsl-command-center.vercel.app" }
+      ]
+    }
+  }
+}
