@@ -643,6 +643,64 @@
   .modal-responsibilities li { font-size: 0.8rem; color: #ffffffcc; font-family: 'Rajdhani', sans-serif; padding: 0.3rem 0 0.3rem 1rem; border-bottom: 1px solid #ffffff08; position: relative; }
   .modal-responsibilities li::before { content: '›'; position: absolute; left: 0; color: #00E5FF; font-weight: 700; }
   .modal-responsibilities li:last-child { border-bottom: none; }
+
+  .proj-modal-overlay {
+    display: none; position: fixed; inset: 0;
+    background: #060810ee; backdrop-filter: blur(8px);
+    z-index: 2000; align-items: flex-start; justify-content: center;
+    padding: 2rem 1rem; overflow-y: auto;
+  }
+  .proj-modal-overlay.open { display: flex; }
+  .proj-modal {
+    background: #0C0F1A; border: 1px solid #00E5FF55;
+    border-radius: 14px; padding: 2rem; max-width: 620px; width: 100%;
+    position: relative; box-shadow: 0 0 60px #00E5FF18;
+    animation: modal-in 0.2s ease; margin: auto;
+  }
+  .proj-modal::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+    background: linear-gradient(135deg, #00E5FF, #2979FF, #651FFF);
+    border-radius: 14px 14px 0 0;
+  }
+  .proj-modal-close {
+    position: absolute; top: 1rem; right: 1rem; background: none;
+    border: 1px solid #2979FF33; border-radius: 4px; color: #2979FF88;
+    font-family: 'Orbitron', monospace; font-size: 0.6rem;
+    padding: 0.25rem 0.5rem; cursor: pointer; letter-spacing: 0.1em;
+  }
+  .proj-modal-close:hover { border-color: #00E5FF; color: #00E5FF; }
+  .proj-modal-title {
+    font-family: 'Orbitron', monospace; font-size: 1.1rem; font-weight: 900;
+    background: linear-gradient(90deg, #00E5FF, #2979FF, #651FFF);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    background-clip: text; margin-bottom: 0.4rem; padding-right: 3rem;
+  }
+  .proj-modal-summary {
+    font-size: 0.85rem; color: #ffffffaa; font-family: 'Rajdhani', sans-serif;
+    line-height: 1.5; margin-bottom: 1.25rem; padding-bottom: 1rem;
+    border-bottom: 1px solid #ffffff0a;
+  }
+  .proj-section-label {
+    font-family: 'Orbitron', monospace; font-size: 0.6rem; color: #2979FF66;
+    letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 0.6rem; margin-top: 1.25rem;
+  }
+  .proj-check-list { list-style: none; padding: 0; margin-bottom: 0.5rem; }
+  .proj-check-list li {
+    font-size: 0.82rem; color: #ffffffcc; font-family: 'Rajdhani', sans-serif;
+    padding: 0.25rem 0 0.25rem 1.4rem; position: relative;
+    border-bottom: 1px solid #ffffff06;
+  }
+  .proj-check-list li:last-child { border-bottom: none; }
+  .proj-check-list.done li::before { content: '✓'; position: absolute; left: 0; color: #00E5FF; font-weight: 700; font-size: 0.75rem; }
+  .proj-check-list.next li::before { content: '→'; position: absolute; left: 0; color: #2979FF; font-weight: 700; }
+  .proj-links { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.25rem; }
+  .proj-link {
+    background: #00E5FF0F; border: 1px solid #00E5FF33; border-radius: 5px;
+    padding: 0.3rem 0.75rem; font-size: 0.7rem; color: #00E5FF;
+    font-family: 'Orbitron', monospace; text-decoration: none; letter-spacing: 0.05em;
+    transition: background 0.2s, border-color 0.2s;
+  }
+  .proj-link:hover { background: #00E5FF22; border-color: #00E5FF88; }
 </style>
 </head>
 <body>
@@ -675,7 +733,7 @@
 
 <div class="grid">
 
-  <div class="card">
+  <div class="card" onclick="openProj('hypnoneuro')" style="cursor:pointer;">
     <div class="card-header">
       <div>
         <div class="card-title">🧠 HypnoNeuro</div>
@@ -690,7 +748,7 @@
     <div class="item"><span class="item-label">Wallet Gate</span><span class="item-value"><span class="dot green"></span>Active</span></div>
   </div>
 
-  <div class="card">
+  <div class="card" onclick="openProj('encrypthealth')" style="cursor:pointer;">
     <div class="card-header">
       <div>
         <div class="card-title">🔐 EncryptHealth</div>
@@ -705,7 +763,7 @@
     <div class="item"><span class="item-label">Build Step</span><span class="item-value">Step 2 of 19</span></div>
   </div>
 
-  <div class="card">
+  <div class="card" onclick="openProj('claimchain')" style="cursor:pointer;">
     <div class="card-header">
       <div>
         <div class="card-title">⛓ ClaimChain</div>
@@ -720,7 +778,7 @@
     <div class="item"><span class="item-label">Branch</span><span class="item-value">phase3-expansion</span></div>
   </div>
 
-  <div class="card">
+  <div class="card" onclick="openProj('neurobalance')" style="cursor:pointer;">
     <div class="card-header">
       <div>
         <div class="card-title">⌚ NeuroBalance Watch</div>
@@ -735,7 +793,7 @@
     <div class="item"><span class="item-label">Vercel Deploy</span><span class="item-value"><span class="dot yellow"></span>Pending</span></div>
   </div>
 
-  <div class="card">
+  <div class="card" onclick="openProj('alchemistforge')" style="cursor:pointer;">
     <div class="card-header">
       <div>
         <div class="card-title">🔮 AlchemistForge</div>
@@ -749,7 +807,7 @@
     <div class="item"><span class="item-label">Events</span><span class="item-value">Transmuted + Celebrated ✓</span></div>
   </div>
 
-  <div class="card">
+  <div class="card" onclick="openProj('infrastructure')" style="cursor:pointer;">
     <div class="card-header">
       <div>
         <div class="card-title">🖥 Infrastructure</div>
@@ -1114,6 +1172,20 @@
     <ul class="modal-responsibilities" id="modal-resp"></ul>
   </div>
 </div>
+
+<div class="proj-modal-overlay" id="proj-modal" onclick="closeProjModal(event)">
+  <div class="proj-modal">
+    <button class="proj-modal-close" onclick="closeProjModal(null, true)">ESC</button>
+    <div class="proj-modal-title" id="proj-modal-title"></div>
+    <div class="proj-modal-summary" id="proj-modal-summary"></div>
+    <div class="proj-section-label">Completed</div>
+    <ul class="proj-check-list done" id="proj-modal-done"></ul>
+    <div class="proj-section-label">Next Steps</div>
+    <ul class="proj-check-list next" id="proj-modal-next"></ul>
+    <div class="proj-section-label">Links</div>
+    <div class="proj-links" id="proj-modal-links"></div>
+  </div>
+</div>
 <footer>FSL · Future Systems Lab · Where Mental Wellness Meets Metaverse · Rights Reserved, Unlicensed</footer>
 
 <script>
@@ -1287,6 +1359,25 @@
   function closeModal() { document.getElementById('agent-modal').classList.remove('open'); }
   function closeAgentModal(e) { if (e.target.id === 'agent-modal') closeModal(); }
   document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+</script>
+<script>
+let FSL_STATUS = null;
+fetch('status.json').then(r => r.json()).then(d => { FSL_STATUS = d; }).catch(() => {});
+function openProj(id) {
+  if (!FSL_STATUS) { alert('Status loading, try again.'); return; }
+  const p = FSL_STATUS.projects[id];
+  if (!p) return;
+  document.getElementById('proj-modal-title').textContent = p.title;
+  document.getElementById('proj-modal-summary').textContent = p.summary;
+  document.getElementById('proj-modal-done').innerHTML = p.completed.map(c => '<li>' + c + '</li>').join('');
+  document.getElementById('proj-modal-next').innerHTML = p.next.map(n => '<li>' + n + '</li>').join('');
+  document.getElementById('proj-modal-links').innerHTML = p.links.map(l => '<a href="' + l.url + '" target="_blank" class="proj-link">' + l.label + '</a>').join('');
+  document.getElementById('proj-modal').classList.add('open');
+}
+function closeProjModal(e, force) {
+  if (force || (e && e.target.id === 'proj-modal')) document.getElementById('proj-modal').classList.remove('open');
+}
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeProjModal(null, true); });
 </script>
 </body>
 </html>
