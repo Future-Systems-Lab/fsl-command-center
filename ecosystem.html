@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<!-- Rights Reserved, Unlicensed — Future Systems Lab -->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Future Systems Lab · Where Mental Wellness Meets Metaverse</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@300;400;600;700&family=Exo+2:wght@200;300;400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #030608;
+  --bg2: #060d10;
+  --teal: #00FFD4;
+  --mint: #7FFFD4;
+  --gold: #FFD700;
+  --purple: #a78bfa;
+  --red: #ff6b6b;
+  --dim: rgba(0,255,212,0.06);
+  --border: rgba(0,255,212,0.12);
+  --text: rgba(127,255,212,0.7);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  font-family: 'Exo 2', sans-serif;
+  color: var(--teal);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* ── SCANLINE ── */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg, transparent, transparent 2px,
+    rgba(0,255,212,0.012) 2px, rgba(0,255,212,0.012) 4px
+  );
+  pointer-events: none;
+  z-index: 9999;
+}
+
+.scan-line {
+  position: fixed;
+  left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(0,255,212,0.5) 50%, transparent 100%);
+  animation: scan 12s linear infinite;
+  pointer-events: none;
+  z-index: 9998;
+}
+
+@keyframes scan {
+  0% { top: -1px; opacity: 0; }
+  5% { opacity: 1; }
+  95% { opacity: 1; }
+  100% { top: 100vh; opacity: 0; }
+}
+
+/* ── GRID BG ── */
+.grid-bg {
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(0,255,212,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,255,212,0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ── NAV ── */
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 40px;
+  background: rgba(3,6,8,0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+}
+
+.nav-brand {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-title {
+  font-family: 'Cinzel', serif;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  color: var(--teal);
+  text-shadow: 0 0 20px rgba(0,255,212,0.4);
+}
+
+.nav-sub {
+  font-size: 0.5rem;
+  letter-spacing: 0.3em;
+  color: rgba(127,255,212,0.4);
+  text-transform: uppercase;
+  margin-top: 2px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+}
+
+.nav-links a {
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(127,255,212,0.6);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover { color: var(--teal); }
+
+.nav-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.6rem;
+  letter-spacing: 0.15em;
+  color: rgba(127,255,212,0.5);
+}
+
+.status-dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--teal);
+  box-shadow: 0 0 8px var(--teal);
+  animation: blink 2s ease-in-out infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+/* ── HERO ── */
+.hero {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 120px 40px 80px;
+  text-align: center;
+}
+
+.hero-eyebrow {
+  font-size: 0.6rem;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: rgba(127,255,212,0.5);
+  margin-bottom: 24px;
+  animation: fadeUp 1s ease both;
+}
+
+.hero-title {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(2rem, 6vw, 4.5rem);
+  font-weight: 300;
+  line-height: 1.1;
+  letter-spacing: 0.08em;
+  color: var(--teal);
+  text-shadow: 0 0 60px rgba(0,255,212,0.3);
+  margin-bottom: 16px;
+  animation: fadeUp 1s 0.1s ease both;
+}
+
+.hero-title span {
+  color: var(--gold);
+  text-shadow: 0 0 40px rgba(255,215,0,0.3);
+}
+
+.hero-sub {
+  font-size: clamp(0.75rem, 2vw, 1rem);
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: rgba(127,255,212,0.5);
+  margin-bottom: 48px;
+  animation: fadeUp 1s 0.2s ease both;
+}
+
+.hero-stats {
+  display: flex;
+  gap: 48px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 64px;
+  animation: fadeUp 1s 0.3s ease both;
+}
+
+.stat {
+  text-align: center;
+}
+
+.stat-num {
+  font-family: 'Cinzel', serif;
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--teal);
+  text-shadow: 0 0 20px rgba(0,255,212,0.4);
+  display: block;
+}
+
+.stat-label {
+  font-size: 0.55rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: rgba(127,255,212,0.4);
+  margin-top: 4px;
+}
+
+.hero-cta {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+  animation: fadeUp 1s 0.4s ease both;
+}
+
+.btn-primary {
+  font-family: 'Cinzel', serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  padding: 14px 36px;
+  background: var(--teal);
+  color: var(--bg);
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.2s;
+  text-transform: uppercase;
+}
+
+.btn-primary:hover {
+  background: var(--mint);
+  box-shadow: 0 0 30px rgba(0,255,212,0.4);
+  transform: translateY(-1px);
+}
+
+.btn-outline {
+  font-family: 'Cinzel', serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  padding: 14px 36px;
+  background: transparent;
+  color: var(--teal);
+  border: 1px solid var(--teal);
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.2s;
+  text-transform: uppercase;
+}
+
+.btn-outline:hover {
+  background: rgba(0,255,212,0.08);
+  box-shadow: 0 0 20px rgba(0,255,212,0.2);
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ── SECTION ── */
+section {
+  position: relative;
+  z-index: 1;
+  padding: 80px 40px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.section-label {
+  font-size: 0.55rem;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: rgba(127,255,212,0.35);
+  margin-bottom: 12px;
+}
+
+.section-title {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(1.2rem, 3vw, 2rem);
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  color: var(--teal);
+  margin-bottom: 48px;
+}
+
+/* ── MODULE GRID ── */
+.module-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.module-card {
+  position: relative;
+  background: var(--dim);
+  border: 1px solid var(--border);
+  padding: 32px;
+  cursor: pointer;
+  text-decoration: none;
+  display: block;
+  transition: all 0.3s;
+  overflow: hidden;
+}
+
+.module-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--card-color), transparent);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.module-card:hover {
+  border-color: var(--card-color);
+  background: rgba(0,255,212,0.04);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 40px rgba(0,0,0,0.4);
+}
+
+.module-card:hover::before { opacity: 1; }
+
+.card-icon {
+  font-size: 2rem;
+  margin-bottom: 16px;
+  display: block;
+}
+
+.card-label {
+  font-size: 0.55rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: rgba(127,255,212,0.4);
+  margin-bottom: 8px;
+}
+
+.card-title {
+  font-family: 'Cinzel', serif;
+  font-size: 1.1rem;
+  letter-spacing: 0.08em;
+  margin-bottom: 12px;
+  color: var(--card-color, var(--teal));
+}
+
+.card-desc {
+  font-size: 0.75rem;
+  line-height: 1.8;
+  color: var(--text);
+  margin-bottom: 20px;
+}
+
+.card-meta {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.tag {
+  font-size: 0.5rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border: 1px solid;
+  border-color: var(--card-color, var(--teal));
+  color: var(--card-color, var(--teal));
+  opacity: 0.6;
+}
+
+.card-status {
+  position: absolute;
+  top: 16px; right: 16px;
+  font-size: 0.5rem;
+  letter-spacing: 0.15em;
+  padding: 3px 8px;
+  background: rgba(0,255,212,0.1);
+  color: var(--teal);
+  text-transform: uppercase;
+}
+
+.card-status.live {
+  background: rgba(0,255,212,0.1);
+  color: var(--teal);
+}
+
+.card-status.building {
+  background: rgba(255,215,0,0.1);
+  color: var(--gold);
+}
+
+/* ── CONTRACT TABLE ── */
+.contract-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 16px;
+}
+
+.contract-row {
+  background: var(--dim);
+  border: 1px solid var(--border);
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.contract-name {
+  font-family: 'Cinzel', serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  color: var(--teal);
+}
+
+.contract-addr {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 0.65rem;
+  color: rgba(127,255,212,0.5);
+  letter-spacing: 0.05em;
+  word-break: break-all;
+}
+
+.contract-link {
+  font-size: 0.55rem;
+  letter-spacing: 0.15em;
+  color: rgba(127,255,212,0.4);
+  text-decoration: none;
+  text-transform: uppercase;
+  margin-top: 4px;
+  transition: color 0.2s;
+}
+
+.contract-link:hover { color: var(--teal); }
+
+/* ── OSS GRID ── */
+.oss-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 12px;
+}
+
+.oss-card {
+  background: var(--dim);
+  border: 1px solid var(--border);
+  padding: 16px 20px;
+  text-decoration: none;
+  display: block;
+  transition: all 0.2s;
+}
+
+.oss-card:hover {
+  border-color: var(--purple);
+  background: rgba(167,139,250,0.05);
+}
+
+.oss-repo {
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  color: var(--purple);
+  margin-bottom: 4px;
+}
+
+.oss-pr {
+  font-size: 0.55rem;
+  letter-spacing: 0.1em;
+  color: rgba(127,255,212,0.4);
+}
+
+/* ── XRPL SECTION ── */
+.xrpl-banner {
+  background: linear-gradient(135deg, rgba(0,255,212,0.04), rgba(255,215,0,0.04));
+  border: 1px solid rgba(255,215,0,0.2);
+  padding: 48px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.xrpl-banner::before {
+  content: 'XRPL';
+  position: absolute;
+  font-family: 'Cinzel', serif;
+  font-size: 8rem;
+  font-weight: 700;
+  color: rgba(255,215,0,0.03);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  letter-spacing: 0.5em;
+  pointer-events: none;
+}
+
+.xrpl-title {
+  font-family: 'Cinzel', serif;
+  font-size: 1.5rem;
+  color: var(--gold);
+  letter-spacing: 0.15em;
+  margin-bottom: 12px;
+  text-shadow: 0 0 30px rgba(255,215,0,0.3);
+}
+
+.xrpl-sub {
+  font-size: 0.75rem;
+  color: rgba(127,255,212,0.6);
+  letter-spacing: 0.15em;
+  margin-bottom: 32px;
+  line-height: 1.8;
+}
+
+.xrpl-features {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 32px;
+}
+
+.xrpl-feat {
+  background: rgba(255,215,0,0.05);
+  border: 1px solid rgba(255,215,0,0.15);
+  padding: 12px 20px;
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  color: var(--gold);
+  text-transform: uppercase;
+}
+
+/* ── FOOTER ── */
+footer {
+  position: relative;
+  z-index: 1;
+  border-top: 1px solid var(--border);
+  padding: 40px;
+  text-align: center;
+}
+
+.footer-brand {
+  font-family: 'Cinzel', serif;
+  font-size: 1rem;
+  letter-spacing: 0.2em;
+  color: var(--teal);
+  margin-bottom: 8px;
+}
+
+.footer-sub {
+  font-size: 0.55rem;
+  letter-spacing: 0.3em;
+  color: rgba(127,255,212,0.3);
+  text-transform: uppercase;
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 0;
+}
+</style>
+</head>
+<body>
+
+<div class="scan-line"></div>
+<div class="grid-bg"></div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-brand">
+    <div class="nav-title">Future Systems Lab</div>
+    <div class="nav-sub">Where Mental Wellness Meets Metaverse</div>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#modules">Modules</a></li>
+    <li><a href="#contracts">Contracts</a></li>
+    <li><a href="#oss">OSS</a></li>
+    <li><a href="#xrpl">XRPL</a></li>
+  </ul>
+  <div class="nav-status">
+    <div class="status-dot"></div>
+    Sepolia Testnet · All Systems Live
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-eyebrow">Future Systems Lab · EncryptAI Ecosystem</div>
+  <h1 class="hero-title">Where Mental Wellness<br>Meets <span>Metaverse</span></h1>
+  <p class="hero-sub">Sovereign Wellness · Blockchain Governance · Decentralized Identity</p>
+
+  <div class="hero-stats">
+    <div class="stat">
+      <span class="stat-num">27</span>
+      <span class="stat-label">Wellness Games</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num">5</span>
+      <span class="stat-label">Live Platforms</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num">8</span>
+      <span class="stat-label">OSS Contributions</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num">4</span>
+      <span class="stat-label">Smart Contracts</span>
+    </div>
+  </div>
+
+  <div class="hero-cta">
+    <a href="https://hypnoneuro-frontend.vercel.app" target="_blank" class="btn-primary">Enter HypnoNeuro</a>
+    <a href="https://fsl-command-center.vercel.app" target="_blank" class="btn-outline">Command Center</a>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- MODULES -->
+<section id="modules">
+  <div class="section-label">FSL Ecosystem</div>
+  <div class="section-title">Five Interconnected Platforms</div>
+
+  <div class="module-grid">
+
+    <a href="https://hypnoneuro-frontend.vercel.app" target="_blank" class="module-card" style="--card-color: #00FFD4">
+      <span class="card-status live">Live</span>
+      <span class="card-icon">🧠</span>
+      <div class="card-label">L1 · L2 · L3</div>
+      <div class="card-title">HypnoNeuro</div>
+      <div class="card-desc">27 browser-based wellness games across Hypnosis, Orthomolecular, and Inner-Child Healing levels. MetaMask-gated with HNT token rewards.</div>
+      <div class="card-meta">
+        <span class="tag">27 Games</span>
+        <span class="tag">HNT Token</span>
+        <span class="tag">MindMastery NFT</span>
+      </div>
+    </a>
+
+    <a href="https://frontend-omega-six-b9szh0blg5.vercel.app" target="_blank" class="module-card" style="--card-color: #FFD700">
+      <span class="card-status live">Live</span>
+      <span class="card-icon">🔐</span>
+      <div class="card-label">Steps 1–7 Complete</div>
+      <div class="card-title">EncryptHealth</div>
+      <div class="card-desc">Sovereign wellness data platform. EHT token. PostgreSQL backend. Blockchain-anchored wellness records. 19-step canonical build.</div>
+      <div class="card-meta">
+        <span class="tag">EHT Token</span>
+        <span class="tag">PostgreSQL</span>
+        <span class="tag">Sepolia</span>
+      </div>
+    </a>
+
+    <a href="https://neurobalance-deploy.vercel.app" target="_blank" class="module-card" style="--card-color: #7FFFD4">
+      <span class="card-status live">Live</span>
+      <span class="card-icon">⌚</span>
+      <div class="card-label">Wearable Prototype</div>
+      <div class="card-title">NeuroBalance Watch</div>
+      <div class="card-desc">Neurotransmitter dashboard with on-chain consent toggles. Plant ally recommendations. HRV simulation and wearable data pipeline.</div>
+      <div class="card-meta">
+        <span class="tag">Consent Layer</span>
+        <span class="tag">Plant Allies</span>
+        <span class="tag">On-Chain</span>
+      </div>
+    </a>
+
+    <a href="#" target="_blank" class="module-card" style="--card-color: #a78bfa">
+      <span class="card-status building">Building</span>
+      <span class="card-icon">⛓</span>
+      <div class="card-label">Sovereign Governance</div>
+      <div class="card-title">ClaimChain</div>
+      <div class="card-desc">On-chain session billing, provider attestations, and HypnoNeuro session credits. Wallet-linked sovereign health governance. NOT an insurance system.</div>
+      <div class="card-meta">
+        <span class="tag">Session Billing</span>
+        <span class="tag">Attestations</span>
+        <span class="tag">Sepolia</span>
+      </div>
+    </a>
+
+    <a href="https://fsl-command-center.vercel.app" target="_blank" class="module-card" style="--card-color: #FFD700">
+      <span class="card-status live">Live</span>
+      <span class="card-icon">⚡</span>
+      <div class="card-label">Mission Control</div>
+      <div class="card-title">FSL Command Center</div>
+      <div class="card-desc">Real-time ecosystem dashboard. 19-step build tracker. Contract addresses. OSS PR links. Agent gateway status. Auto-updated by build automation.</div>
+      <div class="card-meta">
+        <span class="tag">19-Step Build</span>
+        <span class="tag">Auto-Update</span>
+        <span class="tag">Telegram</span>
+      </div>
+    </a>
+
+    <a href="https://future-systems-lab.github.io/Future-Systems-Lab-profile/CV_MegMontanezDavenport.html" target="_blank" class="module-card" style="--card-color: #ff6b6b">
+      <span class="card-status live">Live</span>
+      <span class="card-icon">🌑</span>
+      <div class="card-label">Mental Health · Web3</div>
+      <div class="card-title">AlchemistForge</div>
+      <div class="card-desc">Shadow work on-chain. Case Study Participant #1 active. web2 shadows → web3 light transmutation recorded on Sepolia.</div>
+      <div class="card-meta">
+        <span class="tag">Shadow Work</span>
+        <span class="tag">On-Chain</span>
+        <span class="tag">Case Study</span>
+      </div>
+    </a>
+
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- CONTRACTS -->
+<section id="contracts">
+  <div class="section-label">Sepolia Testnet</div>
+  <div class="section-title">Deployed Smart Contracts</div>
+
+  <div class="contract-grid">
+    <div class="contract-row">
+      <div class="contract-name">HypnoNeuroToken (HNT) v2</div>
+      <div class="contract-addr">0x1ae1e10929f008d1f9883ce574a318abd86084e2</div>
+      <a href="https://eth-sepolia.blockscout.com/address/0x1ae1e10929f008d1f9883ce574a318abd86084e2" target="_blank" class="contract-link">View on Blockscout →</a>
+    </div>
+    <div class="contract-row">
+      <div class="contract-name">EncryptHealthToken (EHT)</div>
+      <div class="contract-addr">0xbDaeb1d05E02D2751Ad07121510b5f0C436E2CdC</div>
+      <a href="https://eth-sepolia.blockscout.com/address/0xbDaeb1d05E02D2751Ad07121510b5f0C436E2CdC" target="_blank" class="contract-link">View on Blockscout →</a>
+    </div>
+    <div class="contract-row">
+      <div class="contract-name">MindMasteryNFT (L1–L3)</div>
+      <div class="contract-addr">0xCb9EcB00574DB29976c7C54045d443666D5C7771</div>
+      <a href="https://eth-sepolia.blockscout.com/address/0xCb9EcB00574DB29976c7C54045d443666D5C7771" target="_blank" class="contract-link">View on Blockscout →</a>
+    </div>
+    <div class="contract-row">
+      <div class="contract-name">ClaimChain Governance</div>
+      <div class="contract-addr">0xf32979200768e8726d5EC5E5AB0CA7407d64A94e</div>
+      <a href="https://eth-sepolia.blockscout.com/address/0xf32979200768e8726d5EC5E5AB0CA7407d64A94e" target="_blank" class="contract-link">View on Blockscout →</a>
+    </div>
+    <div class="contract-row">
+      <div class="contract-name">AlchemistForge / BackupArchive</div>
+      <div class="contract-addr">0xE092336F8f5082e57CcBb341A110C20ad186A324</div>
+      <a href="https://eth-sepolia.blockscout.com/address/0xE092336F8f5082e57CcBb341A110C20ad186A324" target="_blank" class="contract-link">View on Blockscout →</a>
+    </div>
+    <div class="contract-row">
+      <div class="contract-name">Deployer Wallet</div>
+      <div class="contract-addr">0xf22cbF25deEeA36FFF828BAf73CCb049345eF248</div>
+      <a href="https://eth-sepolia.blockscout.com/address/0xf22cbF25deEeA36FFF828BAf73CCb049345eF248" target="_blank" class="contract-link">View on Blockscout →</a>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- OSS -->
+<section id="oss">
+  <div class="section-label">Open Source</div>
+  <div class="section-title">8 Active Contributions</div>
+
+  <div class="oss-grid">
+    <a href="https://github.com/ethereum/EIPs/pull/11409" target="_blank" class="oss-card">
+      <div class="oss-repo">ethereum / EIPs</div>
+      <div class="oss-pr">PR #11409 · Health Data Standard</div>
+    </a>
+    <a href="https://github.com/OpenZeppelin/openzeppelin-contracts/pull/6414" target="_blank" class="oss-card">
+      <div class="oss-repo">OpenZeppelin / contracts</div>
+      <div class="oss-pr">PR #6414 · Smart Contract Security</div>
+    </a>
+    <a href="https://github.com/Uniswap/v3-core/pull/1077" target="_blank" class="oss-card">
+      <div class="oss-repo">Uniswap / v3-core</div>
+      <div class="oss-pr">PR #1077 · DeFi Protocol</div>
+    </a>
+    <a href="https://github.com/openmrs/openmrs-module-fhir2/pull/594" target="_blank" class="oss-card">
+      <div class="oss-repo">openmrs / fhir2</div>
+      <div class="oss-pr">PR #594 · FHIR Interoperability</div>
+    </a>
+    <a href="https://github.com/bigchaindb/bigchaindb/pull/2763" target="_blank" class="oss-card">
+      <div class="oss-repo">bigchaindb / bigchaindb</div>
+      <div class="oss-pr">PR #2763 · Decentralized DB</div>
+    </a>
+    <a href="https://github.com/balancer/balancer-v2-monorepo/pull/2648" target="_blank" class="oss-card">
+      <div class="oss-repo">balancer / v2-monorepo</div>
+      <div class="oss-pr">PR #2648 · DeFi Liquidity</div>
+    </a>
+    <a href="https://github.com/decentralized-identity/presentation-exchange/pull/486" target="_blank" class="oss-card">
+      <div class="oss-repo">DIF / presentation-exchange</div>
+      <div class="oss-pr">PR #486 · Decentralized Identity</div>
+    </a>
+    <a href="https://github.com/hyperledger/fabric/pull/5419" target="_blank" class="oss-card">
+      <div class="oss-repo">hyperledger / fabric</div>
+      <div class="oss-pr">PR #5419 · Enterprise Blockchain</div>
+    </a>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- XRPL -->
+<section id="xrpl">
+  <div class="section-label">Next Phase</div>
+  <div class="section-title">XRPL Integration Roadmap</div>
+
+  <div class="xrpl-banner">
+    <div class="xrpl-title">XRP Ledger Integration</div>
+    <p class="xrpl-sub">
+      Extending FSL's sovereign wellness infrastructure to the XRP Ledger.<br>
+      Payment channels · Native currency support · Cross-chain session billing
+    </p>
+    <div class="xrpl-features">
+      <div class="xrpl-feat">Payment Channels</div>
+      <div class="xrpl-feat">XRP Native Payments</div>
+      <div class="xrpl-feat">ClaimChain → XRPL Bridge</div>
+      <div class="xrpl-feat">Session Micropayments</div>
+      <div class="xrpl-feat">Provider Settlement</div>
+      <div class="xrpl-feat">RLUSD Stablecoin</div>
+    </div>
+    <a href="https://fsl-command-center.vercel.app" target="_blank" class="btn-outline">Track Build Progress →</a>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-brand">Future Systems Lab</div>
+  <div class="footer-sub">Where Mental Wellness Meets Metaverse · Rights Reserved, Unlicensed · 2026</div>
+</footer>
+
+</body>
+</html>
