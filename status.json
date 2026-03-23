@@ -48,7 +48,7 @@
     "encrypthealth": {
       "title": "\ud83d\udd10 EncryptHealth",
       "status": "building",
-      "summary": "Sovereign wellness data platform. Steps 1-7 complete. Step 8 next.",
+      "summary": "Sovereign wellness data platform. Steps 1-8 complete. Step 9 next.",
       "completed": [
         "EncryptHealthToken (EHT) deployed",
         "EncryptAI monorepo scaffolded (Step 1)",
@@ -58,10 +58,10 @@
         "Blockchain writes via viem (Step 5)",
         "HNT token engine \u2014 1 HNT per session (Step 6)",
         "NFT mint at 3/6/9 sessions (Step 6)",
-        "Game-to-mint integration (Step 7)"
+        "Game-to-mint integration (Step 7)",
+        "L2 Orthomolecular Pattern Lab \u2014 5-tab UI, NT radar, ML endpoint, dual wallet auth (Step 8)"
       ],
       "next": [
-        "Step 8 \u2014 L2 Orthomolecular Pattern UI port 3013",
         "Step 9 \u2014 L3 Inner-Child Healing UI",
         "Steps 10-19 pending"
       ],
