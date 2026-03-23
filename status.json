@@ -2,162 +2,182 @@
   "updated": "2026-03-23",
   "projects": {
     "hypnoneuro": {
-      "title": "\ud83e\udde0 HypnoNeuro",
+      "title": "🧠 HypnoNeuro",
       "status": "live",
-      "summary": "27 browser-based wellness games across 3 levels. MetaMask-gated. HNT token + NFT reward model. All games live.",
+      "summary": "27 browser-based wellness games across 3 levels. MetaMask + XRPL gated. HNT token + NFT reward model. Support circles live. Payment selector wired to ClaimChain.",
       "completed": [
-        "HypnoNeuroToken (HNT) v2 deployed \u2014 mint() active",
+        "HypnoNeuroToken (HNT) v2 deployed — mint() active",
         "MindMasteryNFT deployed",
         "Frontend live on Vercel",
-        "MetaMask wallet gate active",
+        "MetaMask wallet gate + XRPL wallet connect (GemWallet/Crossmark/manual)",
         "HNT balance display in header",
-        "L1 Game 1 Threshold Bloom live",
-        "L2 Game 1 Tryptophan Garden live (catch-seeds mechanic)",
-        "All 27 game routes wired and deployed",
+        "All 27 game routes wired and deployed — L1/L2/L3",
         "Game-to-mint integration active",
         "vercel.json routing fix applied",
-        "Step 22 \u2014 Support circles live, group HNT attribution, XRPL anchor, ClaimChain billing stub"
+        "Payment selector — Crypto/Fiat stub/ClaimChain Insurance wired",
+        "Insurance path live — opens ClaimChain portal at https://claimchain-frontend.vercel.app",
+        "Support circles live (Step 22) — group healing rooms, upgraded accounts, provider-facilitated, multi-wallet HNT attribution, XRPL anchor on close",
+        "Provider match + booking flow built (Steps 10-19)",
+        "XRPL dual-chain anchor — every session anchors to Sepolia + XRPL",
+        "ML recommendation endpoint wired — /api/recommend/:wallet"
       ],
       "next": [
+        "End-to-end crypto payment test",
+        "Provider credentialing completion — admin verification queue, AANP check, Dr. Meg pinned at top",
         "Review Nadeem Unity games (ZenSlider, Orbit, ColorPuzzel, DoNotFall)",
-        "Wire live HNT mint on game completion",
-        "Add game to GameSelection index",
-        "Step 22 \u2014 Support circles: group healing rooms, upgraded accounts, provider-facilitated, multi-wallet HNT attribution, ClaimChain group billing"
+        "Wire Stripe when EIN confirmed"
       ],
       "links": [
-        {
-          "label": "Frontend",
-          "url": "https://hypnoneuro-frontend.vercel.app"
-        },
-        {
-          "label": "Threshold Bloom",
-          "url": "https://hypnoneuro-frontend.vercel.app/game/threshold-bloom"
-        },
-        {
-          "label": "Tryptophan Garden",
-          "url": "https://hypnoneuro-frontend.vercel.app/game/tryptophan-garden"
-        },
-        {
-          "label": "HNT v2",
-          "url": "https://eth-sepolia.blockscout.com/address/0x1ae1e10929f008d1f9883ce574a318abd86084e2"
-        },
-        {
-          "label": "MindMastery NFT",
-          "url": "https://eth-sepolia.blockscout.com/address/0xCb9EcB00574DB29976c7C54045d443666D5C7771"
-        }
+        { "label": "Frontend", "url": "https://hypnoneuro-frontend.vercel.app" },
+        { "label": "Threshold Bloom", "url": "https://hypnoneuro-frontend.vercel.app/game/threshold-bloom" },
+        { "label": "Tryptophan Garden", "url": "https://hypnoneuro-frontend.vercel.app/game/tryptophan-garden" },
+        { "label": "Support Circles", "url": "https://hypnoneuro-frontend.vercel.app/circles" },
+        { "label": "HNT v2", "url": "https://eth-sepolia.blockscout.com/address/0x1ae1e10929f008d1f9883ce574a318abd86084e2" },
+        { "label": "MindMastery NFT", "url": "https://eth-sepolia.blockscout.com/address/0xCb9EcB00574DB29976c7C54045d443666D5C7771" }
       ]
     },
     "encrypthealth": {
-      "title": "\ud83d\udd10 EncryptHealth",
-      "status": "building",
-      "summary": "Sovereign wellness data platform. Steps 1-19 complete.",
+      "title": "🔐 EncryptHealth",
+      "status": "live",
+      "summary": "Sovereign wellness data platform. All 19 steps complete. 7/7 API health check green. Provider portal, biosensor infrastructure, ML prediction layer all live.",
       "completed": [
         "EncryptHealthToken (EHT) deployed",
         "EncryptAI monorepo scaffolded (Step 1)",
-        "MetaMask login live (Step 2)",
+        "MetaMask + XRPL dual wallet auth (Step 2)",
         "Wellness API on VPS PM2 port 4001 (Step 3)",
         "Unified PostgreSQL schema (Step 4)",
         "Blockchain writes via viem (Step 5)",
-        "HNT token engine \u2014 1 HNT per session (Step 6)",
+        "HNT token engine — 1 HNT per session (Step 6)",
         "NFT mint at 3/6/9 sessions (Step 6)",
         "Game-to-mint integration (Step 7)",
-        "L2 Orthomolecular Pattern Lab \u2014 5-tab UI, NT radar, ML endpoint, dual wallet auth (Step 8)",
-        "L3 Inner-Child Healing Lab \u2014 metaphorical UI, 5 tabs, dual wallet auth, sanctuary map, zero NT language (Step 9)",
-        "Steps 10-19 complete \u2014 all endpoints live, 7/7 health check green",
-        "Provider portal built \u2014 port 3016, PatientRoster, SessionTimeline",
-        "Consent, analytics, export, groups endpoints live",
-        "All 4 standalone lab repos pushed to Future-Systems-Lab GitHub org"
+        "L2 Orthomolecular Pattern Lab — 5-tab UI, NT radar, ML endpoint (Step 8)",
+        "L3 Inner-Child Healing Lab — metaphorical UI, sanctuary map, zero NT language (Step 9)",
+        "Provider matching + booking flow (Step 10)",
+        "Consent records + /api/consent endpoint (Step 11)",
+        "Biosensing partner one-pager — docs/biosensing-partner-onepager.md (Step 12)",
+        "Analytics endpoint — /api/analytics/platform (Step 13)",
+        "Export endpoint — /api/export (Step 14)",
+        "Groups/support circles CRUD — /api/groups (Step 15)",
+        "NeuroBalance biosensor schema + /api/biometrics/:wallet (Step 16)",
+        "ClaimChain frontend wired into payment selector (Step 17)",
+        "Health check script — 7/7 green, cron-ready (Step 18)",
+        "Command Center updated with full Steps 1-19 grid (Step 19)",
+        "ML sequence predictor — handlers/ml_sequence_predictor.py, time-of-day NT weights",
+        "XRPL dual-chain anchor — xrpl_tx_hash + xrpl_sha256 + xrpl_explorer_url in session_logs",
+        "Provider portal built — port 3016, PatientRoster, SessionTimeline, PatientLink",
+        "biometric_readings table live — Trp, Tyr, Cortisol, Dopamine, Epi, NorEpi fields",
+        "BiomarkerRadar hexagonal canvas UI — port 3015",
+        "NeuroBalance wired to live HypnoNeuro session_logs + HNT balance display",
+        "All 4 standalone lab repos pushed to Future-Systems-Lab GitHub org",
+        "XRPL grants application drafted — xrpl-grants-application.md, $25K, 3 milestones"
       ],
       "next": [
-        "Platform complete \u2014 monitoring and iteration"
+        "Provider credentialing sprint — admin queue, AANP check, Dr. Meg pinned",
+        "End-to-end payment tests",
+        "Submit XRPL grants application after March 17 SEC review"
       ],
       "links": [
-        {
-          "label": "Frontend",
-          "url": "https://frontend-omega-six-b9szh0blg5.vercel.app"
-        },
-        {
-          "label": "EHT Token",
-          "url": "https://eth-sepolia.blockscout.com/address/0xbDaeb1d05E02D2751Ad07121510b5f0C436E2CdC"
-        }
+        { "label": "Frontend", "url": "https://frontend-omega-six-b9szh0blg5.vercel.app" },
+        { "label": "Ortho Labs", "url": "https://github.com/Future-Systems-Lab/encrypthealth-ortho-labs" },
+        { "label": "Inner-Child Labs", "url": "https://github.com/Future-Systems-Lab/encrypthealth-inner-child-labs" },
+        { "label": "NeuroBalance Labs", "url": "https://github.com/Future-Systems-Lab/encrypthealth-neurobalance-labs" },
+        { "label": "Provider Portal", "url": "https://github.com/Future-Systems-Lab/encrypthealth-provider-portal" },
+        { "label": "EHT Token", "url": "https://eth-sepolia.blockscout.com/address/0xbDaeb1d05E02D2751Ad07121510b5f0C436E2CdC" }
       ]
     },
     "claimchain": {
-      "title": "\u26d3 ClaimChain",
-      "status": "building",
-      "summary": "Sovereign wellness governance. On-chain session billing. Frontend deploy pending (Step 17).",
+      "title": "⛓ ClaimChain",
+      "status": "live",
+      "summary": "Sovereign wellness governance. On-chain session billing. Dual-chain anchor Sepolia + XRPL. Frontend live. Insurance path wired into HypnoNeuro.",
       "completed": [
         "Contract deployed on Sepolia",
         "PostgreSQL backend live",
         "Node API on VPS",
         "Telegram approval gate active",
         "Phase 3 Slice 1 + 2 complete",
-        "XRPH dual-chain anchor \u2014 SHA-256 anchored to Sepolia + XRPL testnet (Step 20)",
-        "XRPL wallet connect UI \u2014 GemWallet/Crossmark/manual fallback, additive (Step 21)",
-        "Frontend deployed to Vercel \u2014 https://claimchain-frontend.vercel.app"
+        "XRPH dual-chain anchor — SHA-256 anchored to Sepolia + XRPL testnet (Step 20)",
+        "XRPL wallet connect UI — GemWallet/Crossmark/manual fallback (Step 21)",
+        "Frontend deployed to Vercel — https://claimchain-frontend.vercel.app",
+        "Insurance path wired — HypnoNeuro payment selector opens ClaimChain portal live",
+        "Group session billing stub ready for support circles"
       ],
       "next": [
         "End-to-end crypto payment test",
         "End-to-end ClaimChain insurance path test",
-        "Wire Stripe when EIN confirmed"
+        "Wire Stripe when EIN confirmed",
+        "Provider attestation UI"
       ],
       "links": [
-        {
-          "label": "Contract",
-          "url": "https://eth-sepolia.blockscout.com/address/0xf32979200768e8726d5EC5E5AB0CA7407d64A94e"
-        }
+        { "label": "Frontend", "url": "https://claimchain-frontend.vercel.app" },
+        { "label": "Contract", "url": "https://eth-sepolia.blockscout.com/address/0xf32979200768e8726d5EC5E5AB0CA7407d64A94e" }
       ]
     },
     "neurobalance": {
-      "title": "\u231a NeuroBalance Watch",
+      "title": "⌚ NeuroBalance Watch",
       "status": "live",
-      "summary": "Wearable prototype. Neurotransmitter dashboards. Plant ally recommendations. On-chain consent toggles.",
+      "summary": "Wearable biosensor platform. Live session data feed from HypnoNeuro. Biometric readings infrastructure ready for hardware partner. 5 target companies identified.",
       "completed": [
         "Neurotransmitter dashboard UI built",
         "Plant ally recommendations active",
         "On-chain consent toggle active",
         "Deployed to Vercel",
-        "biometric_readings table live in PostgreSQL",
+        "biometric_readings table live — Trp, Tyr, Cortisol, Dopamine, Epi, NorEpi",
         "POST /api/biometrics/:wallet endpoint live on port 4001",
-        "BiomarkerRadar hexagonal canvas UI built \u2014 port 3015",
-        "Biosensing partner one-pager generated \u2014 docs/biosensing-partner-onepager.md",
-        "README updated \u2014 5 biosensing target companies in priority order"
+        "BiomarkerRadar hexagonal canvas UI — port 3015",
+        "Sessions tab — live feed from HypnoNeuro session_logs",
+        "HNT balance pill in header",
+        "Biosensing partner one-pager — docs/biosensing-partner-onepager.md",
+        "README — 5 biosensing target companies in priority order (Caltech/Stressomic, EnLiSense, Epicore, Nutromics, Biolinq)"
       ],
       "next": [
-        "Contact biosensing partners when ready",
+        "Contact biosensing partners when ready — Caltech Gao Lab first",
         "Wire live sensor SDK when partner confirmed"
       ],
       "links": [
-        {
-          "label": "Frontend",
-          "url": "https://neurobalance-deploy.vercel.app"
-        }
+        { "label": "Frontend", "url": "https://neurobalance-deploy.vercel.app" },
+        { "label": "NeuroBalance Labs", "url": "https://github.com/Future-Systems-Lab/encrypthealth-neurobalance-labs" }
+      ]
+    },
+    "alchemistforge": {
+      "title": "🔮 AlchemistForge",
+      "status": "live",
+      "summary": "Shadow work on-chain. Web2 shadows to Web3 light. Dr. Meg is Case Study Participant #1. Standalone — FSL ecosystem wiring pending.",
+      "completed": [
+        "BackupArchiveContract deployed — 0xE092336F8f5082e57CcBb341A110C20ad186A324",
+        "Shadow aspect recorded on-chain for Case Study Participant #1",
+        "mental-health-on-chain campaign live as systemd service",
+        "Streamlit dashboard port 8502"
+      ],
+      "next": [
+        "Wire AlchemistForge into FSL ecosystem — HNT bridge + session integration",
+        "America Out Loud article — swap placeholder in README when published"
+      ],
+      "links": [
+        { "label": "Contract", "url": "https://eth-sepolia.blockscout.com/address/0xE092336F8f5082e57CcBb341A110C20ad186A324" }
       ]
     },
     "fsl_command_center": {
-      "title": "\u26a1 FSL Command Center",
+      "title": "⚡ FSL Command Center",
       "status": "live",
-      "summary": "Ecosystem dashboard. Auto-updated by build script.",
+      "summary": "Ecosystem dashboard. status.json-driven. All 22 steps tracked. Fully current as of 2026-03-23.",
       "completed": [
         "v3 live with status.json-driven cards",
-        "19-step tracker active",
+        "22-step tracker active",
         "fail2ban active on VPS",
-        "Full build automation script deployed"
+        "Full build automation script deployed",
+        "All projects current — HypnoNeuro, EncryptHealth, ClaimChain, NeuroBalance, AlchemistForge"
       ],
       "next": [
-        "Auto-update on every build run",
-        "Add Anthropic API key to ~/.zshrc",
-        "Wire Codex CLI into pipeline"
+        "Provider credentialing sprint",
+        "End-to-end payment tests",
+        "XRPL grants application submission",
+        "XRPH partnership outreach",
+        "Biosensing partner outreach — Caltech first",
+        "Stripe activation when EIN confirmed"
       ],
       "links": [
-        {
-          "label": "Command Center",
-          "url": "https://fsl-command-center.vercel.app"
-        },
-        {
-          "label": "Deployer",
-          "url": "https://eth-sepolia.blockscout.com/address/0xf22cbF25deEeA36FFF828BAf73CCb049345eF248"
-        }
+        { "label": "Command Center", "url": "https://fsl-command-center.vercel.app" },
+        { "label": "Deployer", "url": "https://eth-sepolia.blockscout.com/address/0xf22cbF25deEeA36FFF828BAf73CCb049345eF248" }
       ]
     }
   }
