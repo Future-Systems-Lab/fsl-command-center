@@ -65,7 +65,8 @@
         "L3 Inner-Child Healing Lab \u2014 metaphorical UI, 5 tabs, dual wallet auth, sanctuary map, zero NT language (Step 9)",
         "Steps 10-19 complete \u2014 all endpoints live, 7/7 health check green",
         "Provider portal built \u2014 port 3016, PatientRoster, SessionTimeline",
-        "Consent, analytics, export, groups endpoints live"
+        "Consent, analytics, export, groups endpoints live",
+        "All 4 standalone lab repos pushed to Future-Systems-Lab GitHub org"
       ],
       "next": [
         "Platform complete \u2014 monitoring and iteration"
@@ -92,12 +93,13 @@
         "Telegram approval gate active",
         "Phase 3 Slice 1 + 2 complete",
         "XRPH dual-chain anchor \u2014 SHA-256 anchored to Sepolia + XRPL testnet (Step 20)",
-        "XRPL wallet connect UI \u2014 GemWallet/Crossmark/manual fallback, additive (Step 21)"
+        "XRPL wallet connect UI \u2014 GemWallet/Crossmark/manual fallback, additive (Step 21)",
+        "Frontend deployed to Vercel \u2014 https://claimchain-frontend.vercel.app"
       ],
       "next": [
-        "Frontend deploy to Vercel (Step 17)",
-        "Wire into HypnoNeuro payment flow",
-        "Provider attestation UI"
+        "End-to-end crypto payment test",
+        "End-to-end ClaimChain insurance path test",
+        "Wire Stripe when EIN confirmed"
       ],
       "links": [
         {
