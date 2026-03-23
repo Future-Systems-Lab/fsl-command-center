@@ -15,7 +15,8 @@
         "L2 Game 1 Tryptophan Garden live (catch-seeds mechanic)",
         "All 27 game routes wired and deployed",
         "Game-to-mint integration active",
-        "vercel.json routing fix applied"
+        "vercel.json routing fix applied",
+        "Step 22 \u2014 Support circles live, group HNT attribution, XRPL anchor, ClaimChain billing stub"
       ],
       "next": [
         "Review Nadeem Unity games (ZenSlider, Orbit, ColorPuzzel, DoNotFall)",
@@ -49,7 +50,7 @@
     "encrypthealth": {
       "title": "\ud83d\udd10 EncryptHealth",
       "status": "building",
-      "summary": "Sovereign wellness data platform. Steps 1-9 complete. Step 10 next.",
+      "summary": "Sovereign wellness data platform. Steps 1-19 complete.",
       "completed": [
         "EncryptHealthToken (EHT) deployed",
         "EncryptAI monorepo scaffolded (Step 1)",
@@ -61,11 +62,13 @@
         "NFT mint at 3/6/9 sessions (Step 6)",
         "Game-to-mint integration (Step 7)",
         "L2 Orthomolecular Pattern Lab \u2014 5-tab UI, NT radar, ML endpoint, dual wallet auth (Step 8)",
-        "L3 Inner-Child Healing Lab \u2014 metaphorical UI, 5 tabs, dual wallet auth, sanctuary map, zero NT language (Step 9)"
+        "L3 Inner-Child Healing Lab \u2014 metaphorical UI, 5 tabs, dual wallet auth, sanctuary map, zero NT language (Step 9)",
+        "Steps 10-19 complete \u2014 all endpoints live, 7/7 health check green",
+        "Provider portal built \u2014 port 3016, PatientRoster, SessionTimeline",
+        "Consent, analytics, export, groups endpoints live"
       ],
       "next": [
-        "Steps 10-19 pending",
-        "NeuroBalance biosensor schema + API + UI + partner one-pager (parallel)"
+        "Platform complete \u2014 monitoring and iteration"
       ],
       "links": [
         {
@@ -111,13 +114,16 @@
         "Neurotransmitter dashboard UI built",
         "Plant ally recommendations active",
         "On-chain consent toggle active",
-        "Deployed to Vercel"
+        "Deployed to Vercel",
+        "biometric_readings table live in PostgreSQL",
+        "POST /api/biometrics/:wallet endpoint live on port 4001",
+        "BiomarkerRadar hexagonal canvas UI built \u2014 port 3015",
+        "Biosensing partner one-pager generated \u2014 docs/biosensing-partner-onepager.md",
+        "README updated \u2014 5 biosensing target companies in priority order"
       ],
       "next": [
-        "Add biometric_readings table to PostgreSQL",
-        "POST /api/biometrics/:wallet endpoint on port 4001",
-        "Live biomarker display panels \u2014 Trp, Tyr, Cortisol, Dopamine, Epi, NorEpi",
-        "Biosensing partner one-pager \u2014 schema + API spec + dual-chain anchoring"
+        "Contact biosensing partners when ready",
+        "Wire live sensor SDK when partner confirmed"
       ],
       "links": [
         {
