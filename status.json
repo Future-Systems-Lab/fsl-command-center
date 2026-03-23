@@ -48,7 +48,7 @@
     "encrypthealth": {
       "title": "\ud83d\udd10 EncryptHealth",
       "status": "building",
-      "summary": "Sovereign wellness data platform. Steps 1-8 complete. Step 9 next.",
+      "summary": "Sovereign wellness data platform. Steps 1-9 complete. Step 10 next.",
       "completed": [
         "EncryptHealthToken (EHT) deployed",
         "EncryptAI monorepo scaffolded (Step 1)",
@@ -59,11 +59,12 @@
         "HNT token engine \u2014 1 HNT per session (Step 6)",
         "NFT mint at 3/6/9 sessions (Step 6)",
         "Game-to-mint integration (Step 7)",
-        "L2 Orthomolecular Pattern Lab \u2014 5-tab UI, NT radar, ML endpoint, dual wallet auth (Step 8)"
+        "L2 Orthomolecular Pattern Lab \u2014 5-tab UI, NT radar, ML endpoint, dual wallet auth (Step 8)",
+        "L3 Inner-Child Healing Lab \u2014 metaphorical UI, 5 tabs, dual wallet auth, sanctuary map, zero NT language (Step 9)"
       ],
       "next": [
-        "Step 9 \u2014 L3 Inner-Child Healing UI",
-        "Steps 10-19 pending"
+        "Steps 10-19 pending",
+        "NeuroBalance biosensor schema + API + UI + partner one-pager (parallel)"
       ],
       "links": [
         {
@@ -112,8 +113,10 @@
         "Deployed to Vercel"
       ],
       "next": [
-        "Wire live HypnoNeuro session data",
-        "Connect HNT balance display"
+        "Add biometric_readings table to PostgreSQL",
+        "POST /api/biometrics/:wallet endpoint on port 4001",
+        "Live biomarker display panels \u2014 Trp, Tyr, Cortisol, Dopamine, Epi, NorEpi",
+        "Biosensing partner one-pager \u2014 schema + API spec + dual-chain anchoring"
       ],
       "links": [
         {
