@@ -1,5 +1,5 @@
 {
-  "updated": "2026-03-22",
+  "updated": "2026-03-23",
   "projects": {
     "hypnoneuro": {
       "title": "\ud83e\udde0 HypnoNeuro",
@@ -85,14 +85,14 @@
         "PostgreSQL backend live",
         "Node API on VPS",
         "Telegram approval gate active",
-        "Phase 3 Slice 1 + 2 complete"
+        "Phase 3 Slice 1 + 2 complete",
+        "XRPH dual-chain anchor \u2014 SHA-256 anchored to Sepolia + XRPL testnet (Step 20)",
+        "XRPL wallet connect UI \u2014 GemWallet/Crossmark/manual fallback, additive (Step 21)"
       ],
       "next": [
         "Frontend deploy to Vercel (Step 17)",
         "Wire into HypnoNeuro payment flow",
-        "Provider attestation UI",
-        "XRPH dual-chain anchor \u2014 same hash to Sepolia + XRPL (after XRPL grants draft)",
-        "XRPH wallet connect UI button \u2014 parallel to MetaMask, additive only"
+        "Provider attestation UI"
       ],
       "links": [
         {
