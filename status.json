@@ -2,11 +2,11 @@
   "updated": "2026-03-22",
   "projects": {
     "hypnoneuro": {
-      "title": "🧠 HypnoNeuro",
+      "title": "\ud83e\udde0 HypnoNeuro",
       "status": "live",
       "summary": "27 browser-based wellness games across 3 levels. MetaMask-gated. HNT token + NFT reward model. All games live.",
       "completed": [
-        "HypnoNeuroToken (HNT) v2 deployed — mint() active",
+        "HypnoNeuroToken (HNT) v2 deployed \u2014 mint() active",
         "MindMasteryNFT deployed",
         "Frontend live on Vercel",
         "MetaMask wallet gate active",
@@ -23,15 +23,30 @@
         "Add game to GameSelection index"
       ],
       "links": [
-        { "label": "Frontend", "url": "https://hypnoneuro-frontend.vercel.app" },
-        { "label": "Threshold Bloom", "url": "https://hypnoneuro-frontend.vercel.app/game/threshold-bloom" },
-        { "label": "Tryptophan Garden", "url": "https://hypnoneuro-frontend.vercel.app/game/tryptophan-garden" },
-        { "label": "HNT v2", "url": "https://eth-sepolia.blockscout.com/address/0x1ae1e10929f008d1f9883ce574a318abd86084e2" },
-        { "label": "MindMastery NFT", "url": "https://eth-sepolia.blockscout.com/address/0xCb9EcB00574DB29976c7C54045d443666D5C7771" }
+        {
+          "label": "Frontend",
+          "url": "https://hypnoneuro-frontend.vercel.app"
+        },
+        {
+          "label": "Threshold Bloom",
+          "url": "https://hypnoneuro-frontend.vercel.app/game/threshold-bloom"
+        },
+        {
+          "label": "Tryptophan Garden",
+          "url": "https://hypnoneuro-frontend.vercel.app/game/tryptophan-garden"
+        },
+        {
+          "label": "HNT v2",
+          "url": "https://eth-sepolia.blockscout.com/address/0x1ae1e10929f008d1f9883ce574a318abd86084e2"
+        },
+        {
+          "label": "MindMastery NFT",
+          "url": "https://eth-sepolia.blockscout.com/address/0xCb9EcB00574DB29976c7C54045d443666D5C7771"
+        }
       ]
     },
     "encrypthealth": {
-      "title": "🔐 EncryptHealth",
+      "title": "\ud83d\udd10 EncryptHealth",
       "status": "building",
       "summary": "Sovereign wellness data platform. Steps 1-7 complete. Step 8 next.",
       "completed": [
@@ -41,22 +56,28 @@
         "Wellness API on VPS PM2 port 4001 (Step 3)",
         "Unified PostgreSQL schema (Step 4)",
         "Blockchain writes via viem (Step 5)",
-        "HNT token engine — 1 HNT per session (Step 6)",
+        "HNT token engine \u2014 1 HNT per session (Step 6)",
         "NFT mint at 3/6/9 sessions (Step 6)",
         "Game-to-mint integration (Step 7)"
       ],
       "next": [
-        "Step 8 — L2 Orthomolecular Pattern UI port 3013",
-        "Step 9 — L3 Inner-Child Healing UI",
+        "Step 8 \u2014 L2 Orthomolecular Pattern UI port 3013",
+        "Step 9 \u2014 L3 Inner-Child Healing UI",
         "Steps 10-19 pending"
       ],
       "links": [
-        { "label": "Frontend", "url": "https://frontend-omega-six-b9szh0blg5.vercel.app" },
-        { "label": "EHT Token", "url": "https://eth-sepolia.blockscout.com/address/0xbDaeb1d05E02D2751Ad07121510b5f0C436E2CdC" }
+        {
+          "label": "Frontend",
+          "url": "https://frontend-omega-six-b9szh0blg5.vercel.app"
+        },
+        {
+          "label": "EHT Token",
+          "url": "https://eth-sepolia.blockscout.com/address/0xbDaeb1d05E02D2751Ad07121510b5f0C436E2CdC"
+        }
       ]
     },
     "claimchain": {
-      "title": "⛓ ClaimChain",
+      "title": "\u26d3 ClaimChain",
       "status": "building",
       "summary": "Sovereign wellness governance. On-chain session billing. Frontend deploy pending (Step 17).",
       "completed": [
@@ -69,14 +90,19 @@
       "next": [
         "Frontend deploy to Vercel (Step 17)",
         "Wire into HypnoNeuro payment flow",
-        "Provider attestation UI"
+        "Provider attestation UI",
+        "XRPH dual-chain anchor \u2014 same hash to Sepolia + XRPL (after XRPL grants draft)",
+        "XRPH wallet connect UI button \u2014 parallel to MetaMask, additive only"
       ],
       "links": [
-        { "label": "Contract", "url": "https://eth-sepolia.blockscout.com/address/0xf32979200768e8726d5EC5E5AB0CA7407d64A94e" }
+        {
+          "label": "Contract",
+          "url": "https://eth-sepolia.blockscout.com/address/0xf32979200768e8726d5EC5E5AB0CA7407d64A94e"
+        }
       ]
     },
     "neurobalance": {
-      "title": "⌚ NeuroBalance Watch",
+      "title": "\u231a NeuroBalance Watch",
       "status": "live",
       "summary": "Wearable prototype. Neurotransmitter dashboards. Plant ally recommendations. On-chain consent toggles.",
       "completed": [
@@ -90,11 +116,14 @@
         "Connect HNT balance display"
       ],
       "links": [
-        { "label": "Frontend", "url": "https://neurobalance-deploy.vercel.app" }
+        {
+          "label": "Frontend",
+          "url": "https://neurobalance-deploy.vercel.app"
+        }
       ]
     },
     "fsl_command_center": {
-      "title": "⚡ FSL Command Center",
+      "title": "\u26a1 FSL Command Center",
       "status": "live",
       "summary": "Ecosystem dashboard. Auto-updated by build script.",
       "completed": [
@@ -109,8 +138,14 @@
         "Wire Codex CLI into pipeline"
       ],
       "links": [
-        { "label": "Command Center", "url": "https://fsl-command-center.vercel.app" },
-        { "label": "Deployer", "url": "https://eth-sepolia.blockscout.com/address/0xf22cbF25deEeA36FFF828BAf73CCb049345eF248" }
+        {
+          "label": "Command Center",
+          "url": "https://fsl-command-center.vercel.app"
+        },
+        {
+          "label": "Deployer",
+          "url": "https://eth-sepolia.blockscout.com/address/0xf22cbF25deEeA36FFF828BAf73CCb049345eF248"
+        }
       ]
     }
   }
