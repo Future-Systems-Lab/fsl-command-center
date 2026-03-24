@@ -31,7 +31,8 @@
         "HNT mint confirmed working end-to-end \u2014 MetaMask sign \u2192 server mint \u2192 Blockscout tx hash",
         "Avatar session room \u2014 API_BASE fixed, Daily.co fallback placeholder live",
         "Wellness score endpoint live \u2014 /api/wellness-score/:wallet, auto-refreshes on game complete",
-        "NeuroBalance Watch wired to game completions \u2014 biometric_readings writes on every session"
+        "NeuroBalance Watch wired to game completions \u2014 biometric_readings writes on every session",
+        "Daily.co avatar sessions live \u2014 futuresystemslab.daily.co, video_available:true"
       ],
       "next": [
         "Payment card reorder deployed \u2014 Crypto/Fiat/XRP/Insurance",
