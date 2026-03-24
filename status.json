@@ -1,5 +1,5 @@
 {
-  "updated": "2026-03-23",
+  "updated": "2026-03-24",
   "projects": {
     "hypnoneuro": {
       "title": "\ud83e\udde0 HypnoNeuro",
@@ -28,7 +28,10 @@
         "Endocannabinoid baseline \u2014 always included, /api/recommend/baseline/:wallet",
         "COA Lookup page \u2014 /coa route, AI extraction, 5 FSL product COAs",
         "Dr. Meg bookable=false \u2014 Platform Director badge, not bookable",
-        "HNT mint confirmed working end-to-end \u2014 MetaMask sign \u2192 server mint \u2192 Blockscout tx hash"
+        "HNT mint confirmed working end-to-end \u2014 MetaMask sign \u2192 server mint \u2192 Blockscout tx hash",
+        "Avatar session room \u2014 API_BASE fixed, Daily.co fallback placeholder live",
+        "Wellness score endpoint live \u2014 /api/wellness-score/:wallet, auto-refreshes on game complete",
+        "NeuroBalance Watch wired to game completions \u2014 biometric_readings writes on every session"
       ],
       "next": [
         "Payment card reorder deployed \u2014 Crypto/Fiat/XRP/Insurance",
