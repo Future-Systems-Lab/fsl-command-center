@@ -1,5 +1,5 @@
 # Future Systems Lab
-## Sovereign Wellness Infrastructure for the Frequency Age
+## Sovereign Wellness Infrastructure
 
 ---
 
@@ -19,7 +19,7 @@ We are not a healthcare provider. We are not Calm. We are the rails.
 | **EncryptHealth** | The shared API spine — session logging, ML wellness recommendations, provider registry, biometric ingest, FHIR export, XRPL dual-chain anchoring. Live. |
 | **ClaimChain** | Insurance eligibility verification and claim anchoring via DAO governance. Opens direct connection to payer networks. Live portal. |
 | **NeuroBalance Watch** | Biometric integration layer for wearable data ingest — HRV, EEG, biosensor input. Transforms sessions from reactive to predictive. Live. |
-| **AlchemistForge** | HNT cross-chain bridge. XRPL ↔ Sepolia token flow. Operator treasury liquidity. Live contract. |
+| **AlchemistForge** | Shadow work and inner transformation layer — on-chain journaling with HNT bridge. Live contract. |
 
 **Every session produces:**
 - 1 HNT minted to user wallet (Sepolia ERC-20, deployer pays gas)
@@ -79,7 +79,7 @@ FSL is the wellness consumer layer that feeds XRPH's HIPAA-grade healthcare infr
 - **XRPH** — Technical partnership MOU. Joint XRPL Foundation grant application. FSL wellness sessions → XRPH compliance verification layer.
 - **Biosensing hardware** — API integration pilot. Caltech Biophysics or Muse (InteraXon) as first partner. FSL provides sovereign data model; partner provides hardware distribution.
 - **ISOM** — Practitioner network endorsement. Directory onboarding for 20+ Tier 3+ providers.
-- **First operator license** — Psilocybin-adjacent retreat, biohacking clinic, or functional medicine practice. Turn-key white-label deployment.
+- **First operator license** — Integrative wellness retreat, biohacking clinic, or functional medicine practice. Turn-key white-label deployment.
 - **XRPL Foundation** — $25K grant for dual-chain anchor infrastructure, XRPL wallet connect, HNT bridge.
 
 ---
