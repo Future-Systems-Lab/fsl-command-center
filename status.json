@@ -22,7 +22,12 @@
         "ML recommendation endpoint wired \u2014 /api/recommend/:wallet",
         "Provider directory live at /providers \u2014 tier-sorted, disclaimer-gated",
         "Find a Practitioner gold card in GameSelection",
-        "FSL liability disclaimer \u2014 3 placements, on-chain anchored"
+        "FSL liability disclaimer \u2014 3 placements, on-chain anchored",
+        "Virtual avatar session rooms \u2014 Daily.co WebRTC, wallet-connected, ClaimChain anchored",
+        "Symptom checklist routing confirmed correct",
+        "Endocannabinoid baseline \u2014 always included, /api/recommend/baseline/:wallet",
+        "COA Lookup page \u2014 /coa route, AI extraction, 5 FSL product COAs",
+        "Dr. Meg bookable=false \u2014 Platform Director badge, not bookable"
       ],
       "next": [
         "End-to-end crypto payment test",
@@ -100,7 +105,11 @@
         "Platform fee engine \u2014 15% default, provider net rate displayed",
         "Student/in-training pathway \u2014 11 schools listed, KCNH first",
         "License lock/unlock automation \u2014 auto-suspend on expiry, auto-reinstate on verification",
-        "Provider portal \u2014 14 tabs including reminders and e-sign"
+        "Provider portal \u2014 14 tabs including reminders and e-sign",
+        "AlchemistForge HNT bridge \u2014 /api/alchemist/bridge, session integration",
+        "ClaimChain insurance path confirmed live",
+        "Provider portal deployed \u2014 provider-portal-wheat.vercel.app",
+        "NeuroBalance Watch redeployed \u2014 neurobalance-labs.vercel.app"
       ],
       "next": [
         "End-to-end payment test \u2014 crypto path through ClaimChain",
@@ -230,15 +239,18 @@
         "22-step tracker active",
         "fail2ban active on VPS",
         "Full build automation script deployed",
-        "All projects current \u2014 HypnoNeuro, EncryptHealth, ClaimChain, NeuroBalance, AlchemistForge"
+        "All projects current \u2014 HypnoNeuro, EncryptHealth, ClaimChain, NeuroBalance, AlchemistForge",
+        "Step tracker updated \u2014 all 27+ steps, AlchemistForge, Avatar Sessions, XRPL Grants",
+        "AlchemistForge card added to Command Center"
       ],
       "next": [
-        "Provider credentialing sprint",
-        "End-to-end payment tests",
-        "XRPL grants application submission",
-        "XRPH partnership outreach",
+        "Retest HNT mint end-to-end",
+        "Submit XRPL grants application after SEC review",
+        "XRPH partnership outreach after grants submitted",
+        "Stripe activation after EIN confirmed",
+        "Verifiable.com API key after first real providers onboard",
         "Biosensing partner outreach \u2014 Caltech first",
-        "Stripe activation when EIN confirmed"
+        "Nadeem Unity games \u2014 Apple App Store last"
       ],
       "links": [
         {
