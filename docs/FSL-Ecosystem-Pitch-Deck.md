@@ -43,7 +43,7 @@ All five platforms share:
 - A unified wallet identity layer (MetaMask EVM + GemWallet/Crossmark XRPL)
 - A common session schema anchored on Sepolia + XRPL simultaneously
 - The HNT utility token as the engagement and reward medium
-- The EncryptHealth API as the shared data spine (VPS: 74.208.202.239, PM2-managed, PostgreSQL)
+- The EncryptHealth API as the shared data spine (VPS: IONOS VPS — nginx proxied, PM2-managed, PM2-managed, PostgreSQL)
 
 ---
 
@@ -82,7 +82,7 @@ Backend:     Express.js, PostgreSQL, PM2, Nginx reverse proxy
 Blockchain:  viem (Sepolia), xrpl.js 4.6.0 (XRPL)
 Auth:        MetaMask EIP-712 personal_sign gate
 AI:          ML recommendation engine (/api/recommend/:wallet) — NT time-weight scoring
-Infra:       Vercel (5 frontends), VPS 74.208.202.239 (EncryptHealth API)
+Infra:       Vercel (5 frontends), VPS IONOS VPS — nginx proxied, PM2-managed (EncryptHealth API)
 ```
 
 ---
@@ -101,9 +101,7 @@ Infra:       Vercel (5 frontends), VPS 74.208.202.239 (EncryptHealth API)
 | Frequency modality | L1 Hypnosis, L2 Orthomolecular, L3 Inner-Child | Meditation only |
 | Operator model | Turn-key white-label for clinics/retreats | No |
 
-### FSL vs. Biocanic
 
-| Dimension | FSL | Biocanic |
 |---|---|---|
 | Session types | 27 cross-modality games + avatar rooms | Biofeedback only |
 | Blockchain anchoring | Dual-chain (EVM + XRPL) | None |
@@ -365,7 +363,7 @@ Recent session anchor:
 
 **Opportunity:** Turn-key FSL operator licensing. A retreat or clinic gets the full FSL stack (branded, white-labeled) with provider directory, session logging, HNT rewards, and ClaimChain insurance — for a flat operator licensing fee.
 
-**Ask:** First operator licensing deal — psilocybin-adjacent retreat or biohacking clinic preferred.
+**Ask:** First operator licensing deal — integrative wellness retreat or biohacking clinic.
 
 ---
 
@@ -395,7 +393,7 @@ FSL White-Label License
 
 ### Target Operator Profiles
 
-- Psilocybin-adjacent integration retreat centers
+- Integrative wellness retreat centers
 - Biohacking clinics (functional medicine, IV therapy, neurofeedback)
 - Hypnotherapy group practices
 - Corporate wellness program operators
@@ -443,7 +441,7 @@ Autonomous software engineering infrastructure. Full-stack monorepo. Operates on
 
 **Infrastructure Footprint:**
 - 5 Vercel frontends (hypnoneuro, encrypthealth, claimchain, neurobalance, command center)
-- 1 VPS (74.208.202.239) — Express API, PostgreSQL, PM2, Nginx
+- 1 VPS (IONOS VPS — nginx proxied, PM2-managed) — Express API, PostgreSQL, PM2, Nginx
 - 6 Sepolia smart contracts (FSLToken, HypnoNeuroNFT, MindMasteryNFT, EncryptHealthVault, ClaimChainDAO, AlchemistForge)
 - XRPL testnet wallet funded and anchoring live
 - fail2ban: 188+ SSH brute-force attempts blocked, 119 IPs banned
@@ -454,7 +452,7 @@ Autonomous software engineering infrastructure. Full-stack monorepo. Operates on
 
 **FSL is seeking:**
 
-1. **Strategic partners** — XRPH, Biocanic (complementary), ISOM, biosensing hardware companies
+1. **Strategic partners** — XRPH, ISOM, biosensing hardware companies
 2. **First operator licenses** — retreat centers, biohacking clinics, group practices
 3. **XRPL Foundation grant** ($25K) — dual-chain anchor infrastructure, XRPL wallet connect, HNT token bridge
 4. **Introductions** — to insurance/benefits procurement, SEC-adjacent legal review, CLARITY Act working groups
