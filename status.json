@@ -27,13 +27,18 @@
         "Symptom checklist routing confirmed correct",
         "Endocannabinoid baseline \u2014 always included, /api/recommend/baseline/:wallet",
         "COA Lookup page \u2014 /coa route, AI extraction, 5 FSL product COAs",
-        "Dr. Meg bookable=false \u2014 Platform Director badge, not bookable"
+        "Dr. Meg bookable=false \u2014 Platform Director badge, not bookable",
+        "HNT mint confirmed working end-to-end \u2014 MetaMask sign \u2192 server mint \u2192 Blockscout tx hash"
       ],
       "next": [
-        "End-to-end crypto payment test",
-        "Provider credentialing completion \u2014 admin verification queue, AANP check, Dr. Meg pinned at top",
-        "Review Nadeem Unity games (ZenSlider, Orbit, ColorPuzzel, DoNotFall)",
-        "Wire Stripe when EIN confirmed"
+        "Payment card reorder deployed \u2014 Crypto/Fiat/XRP/Insurance",
+        "Retest all 27 games for mint flow",
+        "Submit XRPL grants application after SEC review",
+        "XRPH partnership outreach after grants submitted",
+        "Stripe activation after EIN confirmed",
+        "Virtual avatar sessions \u2014 test with real provider + user",
+        "Biosensing partner outreach \u2014 Caltech first",
+        "Nadeem Unity games \u2014 Apple App Store last"
       ],
       "links": [
         {
