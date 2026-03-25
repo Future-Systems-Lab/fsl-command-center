@@ -1,5 +1,5 @@
 {
-  "updated": "2026-03-25",
+  "updated": "2026-03-25T11:30:00Z",
   "projects": {
     "hypnoneuro": {
       "title": "\ud83e\udde0 HypnoNeuro",
@@ -40,16 +40,25 @@
         "Operator pricing page live at /operator \u2014 3 tiers, Apply Now",
         "Help Center live at /help \u2014 6 sections, accordion FAQ",
         "AlchemistForge card in GameSelection \u2014 shadow work on chain",
-        "White-label operator config \u2014 operator.js, avatarEnabled, maxFreeAvatars"
+        "White-label operator config \u2014 operator.js, avatarEnabled, maxFreeAvatars",
+        "Human character builder \u2014 skin tone (6), hair color (8), hair style (6), attire (6), SVG illustrated face/bust, tier-gated, glow effects for NFT",
+        "Operator registration system \u2014 /operator/register form, PostgreSQL table, Telegram notification, thank-you screen",
+        "Demo mode \u2014 ?demo=true bypasses wallet/gates, sample providers, sample wellness score, golden banner",
+        "Mobile responsiveness \u2014 global media queries, clamp() padding, auto-fit grid columns",
+        "Error boundary \u2014 runtime catch with Refresh button, skeleton loaders (ProviderDirectory, WellnessScoreCard)",
+        "SEO meta tags \u2014 og:title/description/image, twitter:card, robots.txt, sitemap.xml (9 routes)",
+        "Performance optimization \u2014 React.lazy + Suspense on all 45+ game/page components, vendor chunk splitting, main bundle 1108KB \u2192 557KB (50% reduction)",
+        "Notification bell \u2014 localStorage per wallet, unread count badge, HNT mint / NFT milestone / session reminder types",
+        "Full API test suite \u2014 10/10 endpoints PASS, results at docs/test-results.md"
       ],
       "next": [
-        "Payment card reorder deployed \u2014 Crypto/Fiat/XRP/Insurance",
         "Retest all 27 games for mint flow",
         "Submit XRPL grants application after SEC review",
         "XRPH partnership outreach after grants submitted",
         "Stripe activation after EIN confirmed",
         "Virtual avatar sessions \u2014 test with real provider + user",
         "Biosensing partner outreach \u2014 Caltech first",
+        "Set ANTHROPIC_API_KEY on VPS to enable live Claude AI recommendations",
         "Nadeem Unity games \u2014 Apple App Store last"
       ],
       "links": [
