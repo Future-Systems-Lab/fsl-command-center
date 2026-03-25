@@ -1,5 +1,5 @@
 {
-  "updated": "2026-03-25T11:30:00Z",
+  "updated": "2026-03-25",
   "projects": {
     "hypnoneuro": {
       "title": "\ud83e\udde0 HypnoNeuro",
@@ -49,7 +49,15 @@
         "SEO meta tags \u2014 og:title/description/image, twitter:card, robots.txt, sitemap.xml (9 routes)",
         "Performance optimization \u2014 React.lazy + Suspense on all 45+ game/page components, vendor chunk splitting, main bundle 1108KB \u2192 557KB (50% reduction)",
         "Notification bell \u2014 localStorage per wallet, unread count badge, HNT mint / NFT milestone / session reminder types",
-        "Full API test suite \u2014 10/10 endpoints PASS, results at docs/test-results.md"
+        "Full API test suite \u2014 10/10 endpoints PASS, results at docs/test-results.md",
+        "Privy universal login \u2014 email, Google, Apple, MetaMask, WalletConnect. Mobile-friendly on all devices.",
+        "Demo mode live \u2014 ?demo=true bypasses wallet for recording and partner demos",
+        "Bundle size 50% reduction \u2014 1,108KB to 557KB",
+        "SEO meta tags, robots.txt, sitemap.xml",
+        "Error boundaries + skeleton loaders",
+        "Notification bell \u2014 HNT/NFT/session alerts",
+        "Mobile responsiveness \u2014 all pages 480px optimized",
+        "API test suite \u2014 10/10 passing"
       ],
       "next": [
         "Retest all 27 games for mint flow",
