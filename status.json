@@ -32,7 +32,15 @@
         "Avatar session room \u2014 API_BASE fixed, Daily.co fallback placeholder live",
         "Wellness score endpoint live \u2014 /api/wellness-score/:wallet, auto-refreshes on game complete",
         "NeuroBalance Watch wired to game completions \u2014 biometric_readings writes on every session",
-        "Daily.co avatar sessions live \u2014 futuresystemslab.daily.co, video_available:true"
+        "Daily.co avatar sessions live \u2014 futuresystemslab.daily.co, video_available:true",
+        "Avatar selection system \u2014 30 avatars, 3 tiers, NFT-gated, sessionStorage per wallet",
+        "Avatar gallery live at /avatars \u2014 tier filters, lock states, custom upload for NFT holders",
+        "Daily.co session fix \u2014 Open in New Tab primary, inline embed fallback",
+        "Support circles show avatars instead of wallet addresses",
+        "Operator pricing page live at /operator \u2014 3 tiers, Apply Now",
+        "Help Center live at /help \u2014 6 sections, accordion FAQ",
+        "AlchemistForge card in GameSelection \u2014 shadow work on chain",
+        "White-label operator config \u2014 operator.js, avatarEnabled, maxFreeAvatars"
       ],
       "next": [
         "Payment card reorder deployed \u2014 Crypto/Fiat/XRP/Insurance",
