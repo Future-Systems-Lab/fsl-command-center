@@ -1,5 +1,5 @@
 {
-  "updated": "2026-03-24",
+  "updated": "2026-03-25",
   "projects": {
     "hypnoneuro": {
       "title": "\ud83e\udde0 HypnoNeuro",
@@ -220,16 +220,18 @@
     "alchemistforge": {
       "title": "\ud83d\udd2e AlchemistForge",
       "status": "live",
-      "summary": "Shadow work on-chain. Web2 shadows to Web3 light. Dr. Meg is Case Study Participant #1. Standalone \u2014 FSL ecosystem wiring pending.",
+      "summary": "Shadow work on-chain. Web2 shadows to Web3 light. Dr. Meg is Case Study Participant #1. Wired into FSL ecosystem \u2014 HNT bridge live, GameSelection card deployed.",
       "completed": [
-        "BackupArchiveContract deployed \u2014 0xE092336F8f5082e57CcBb341A110C20ad186A324",
+        "Contract deployed \u2014 0xE092336F8f5082e57CcBb341A110C20ad186A324",
         "Shadow aspect recorded on-chain for Case Study Participant #1",
         "mental-health-on-chain campaign live as systemd service",
-        "Streamlit dashboard port 8502"
+        "Streamlit dashboard port 8502",
+        "HNT bridge endpoint live \u2014 POST /api/alchemist/bridge on VPS port 4001",
+        "AlchemistForge card wired into HypnoNeuro GameSelection \u2014 opens Blockscout contract"
       ],
       "next": [
-        "Wire AlchemistForge into FSL ecosystem \u2014 HNT bridge + session integration",
-        "America Out Loud article \u2014 swap placeholder in README when published"
+        "America Out Loud article \u2014 swap placeholder in README when published",
+        "Onboard additional case study participants"
       ],
       "links": [
         {
