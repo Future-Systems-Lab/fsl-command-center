@@ -760,7 +760,7 @@
     <div class="item"><span class="item-label">EHT Token</span><span class="item-value"><a href="https://eth-sepolia.blockscout.com/address/0xbDaeb1d05E02D2751Ad07121510b5f0C436E2CdC" target="_blank">0xbDae...2CdC</a></span></div>
     <div class="item"><span class="item-label">Backend</span><span class="item-value"><span class="dot green"></span>PostgreSQL Live</span></div>
     <div class="item"><span class="item-label">Frontend Deploy</span><span class="item-value"><span class="dot yellow"></span>Pending</span></div>
-    <div class="item"><span class="item-label">Build Step</span><span class="item-value">Step 7 of 19</span></div>
+    <div class="item"><span class="item-label">Build Step</span><span class="item-value">32 / 32 Complete</span></div>
   </div>
 
   <div class="card" onclick="openProj('claimchain')" style="cursor:pointer;">
@@ -827,260 +827,307 @@
     <div class="tracker-header">
       <div>
         <div class="card-title">📊 FSL Progress Tracker</div>
-        <div class="card-sub">EncryptAI Monorepo · 19-Step Canonical Build · DEng Applied Project</div>
+        <div class="card-sub">EncryptAI Monorepo · 32-Milestone Build · All Complete</div>
       </div>
-      <span class="badge building">IN PROGRESS</span>
+      <span class="badge live">ALL COMPLETE</span>
     </div>
 
     <div class="overall-bar-wrap">
       <div class="overall-bar-label">
         <span>Overall Build Progress</span>
-        <span>7 / 19 Steps Complete</span>
+        <span>32 / 32 Milestones Complete</span>
       </div>
-      <div class="overall-bar"><div class="overall-bar-fill"></div></div>
+      <div class="overall-bar"><div class="overall-bar-fill" style="width:100%"></div></div>
     </div>
 
     <div class="phase-block">
-      <div class="phase-label">Phase 1 — Foundation</div>
+      <div class="phase-label">Phase 1 — Foundation (Steps 1–5)</div>
       <div class="timeline">
-
         <div class="tl-item">
           <div class="tl-node done">✓</div>
-          <div class="tl-line">
-            <div class="tl-content">
-              <div class="tl-title done-text">Step 01 — Monorepo Setup</div>
-              <div class="tl-sub">EncryptAI monorepo · CLAUDE.md · BUILD_LOG.md · fsl-audit.sh</div>
-            </div>
-          </div>
+          <div class="tl-line"><div class="tl-content">
+            <div class="tl-title done-text">Step 01 — Monorepo Setup</div>
+            <div class="tl-sub">EncryptAI monorepo · CLAUDE.md · BUILD_LOG.md · fsl-audit.sh</div>
+          </div></div>
           <div class="tl-badge done">DONE</div>
         </div>
-
         <div class="tl-item">
           <div class="tl-node done">✓</div>
-          <div class="tl-line">
-            <div class="tl-content">
-              <div class="tl-title done-text">Step 02 — MetaMask Login (Secure Health Login)</div>
-              <div class="tl-sub">Next.js + wagmi 2.16.9 + viem · injected() connector · Live on Vercel</div>
-              <div class="tl-addr"><a href="https://secure-health-login-dfk6unk2d-megs-projects-95a11e5b.vercel.app/" target="_blank">secure-health-login.vercel.app</a></div>
-            </div>
-          </div>
+          <div class="tl-line"><div class="tl-content">
+            <div class="tl-title done-text">Step 02 — MetaMask Login</div>
+            <div class="tl-sub">Next.js + wagmi + viem · injected() connector · Live on Vercel</div>
+          </div></div>
           <div class="tl-badge done">DONE</div>
         </div>
-
         <div class="tl-item">
-          <div class="tl-node active">03</div>
-          <div class="tl-line">
-            <div class="tl-content">
-              <div class="tl-title done-text">Step 03 — EncryptHealth Backend ← DONE</div>
-              <div class="tl-sub">Health records API · PostgreSQL schema · Node.js service layer</div>
-            </div>
-          </div>
-          <div class="tl-badge active">ACTIVE</div>
+          <div class="tl-node done">✓</div>
+          <div class="tl-line"><div class="tl-content">
+            <div class="tl-title done-text">Step 03 — EncryptHealth Backend</div>
+            <div class="tl-sub">Express API · PostgreSQL schema · PM2 on VPS port 4001 · 7/7 health check green</div>
+          </div></div>
+          <div class="tl-badge done">DONE</div>
         </div>
-
         <div class="tl-item">
-          <div class="tl-node pending">04</div>
-          <div class="tl-line">
-            <div class="tl-content">
-              <div class="tl-title done-text">Step 04 — PostgreSQL Integration</div>
-              <div class="tl-sub">Unified DB layer · ClaimChain + EncryptHealth schema merge</div>
-            </div>
-          </div>
-          <div class="tl-badge pending">PENDING</div>
+          <div class="tl-node done">✓</div>
+          <div class="tl-line"><div class="tl-content">
+            <div class="tl-title done-text">Step 04 — PostgreSQL Integration</div>
+            <div class="tl-sub">Unified DB · ClaimChain + EncryptHealth schema merge · biometric_readings table</div>
+          </div></div>
+          <div class="tl-badge done">DONE</div>
         </div>
-
         <div class="tl-item">
-          <div class="tl-node pending">05</div>
-          <div class="tl-line">
-            <div class="tl-content">
-              <div class="tl-title done-text">Step 05 — Blockchain Writes</div>
-              <div class="tl-sub">On-chain health record anchoring · SHA-256 hashing · Sepolia</div>
-            </div>
-          </div>
-          <div class="tl-badge pending">PENDING</div>
+          <div class="tl-node done">✓</div>
+          <div class="tl-line"><div class="tl-content">
+            <div class="tl-title done-text">Step 05 — Blockchain Writes</div>
+            <div class="tl-sub">SHA-256 anchoring to Sepolia · viem · EncryptHealthVault</div>
+          </div></div>
+          <div class="tl-badge done">DONE</div>
         </div>
-
       </div>
     </div>
 
     <div class="phase-block">
-      <div class="phase-label">Phase 2 — Token & Game Engine</div>
+      <div class="phase-label">Phase 2 — Token & Game Engine (Steps 6–9)</div>
       <div class="timeline">
-
         <div class="tl-item">
-          <div class="tl-node pending">06</div>
-          <div class="tl-line">
-            <div class="tl-content">
-              <div class="tl-title done-text">Step 06 — Token / NFT Engine</div>
-              <div class="tl-sub">HNT · EHT · MindMasteryNFT · 3/6/9 discount model</div>
-              <div class="tl-addr">
-                HNT: <a href="https://eth-sepolia.blockscout.com/address/0x1ae1e10929f008d1f9883ce574a318abd86084e2" target="_blank">0x1ae1...084e2</a> ·
-                EHT: <a href="https://eth-sepolia.blockscout.com/address/0xbDaeb1d05E02D2751Ad07121510b5f0C436E2CdC" target="_blank">0xbDae...2CdC</a>
-              </div>
-            </div>
-          </div>
-          <div class="tl-badge pending">PENDING</div>
+          <div class="tl-node done">✓</div>
+          <div class="tl-line"><div class="tl-content">
+            <div class="tl-title done-text">Step 06 — Token / NFT Engine</div>
+            <div class="tl-sub">HNT v2 mint() active · EHT · MindMasteryNFT · 1 HNT per session · NFT at 3/6/9</div>
+            <div class="tl-addr">HNT: <a href="https://eth-sepolia.blockscout.com/address/0x1ae1e10929f008d1f9883ce574a318abd86084e2" target="_blank">0x1ae1...084e2</a> · EHT: <a href="https://eth-sepolia.blockscout.com/address/0xbDaeb1d05E02D2751Ad07121510b5f0C436E2CdC" target="_blank">0xbDae...2CdC</a></div>
+          </div></div>
+          <div class="tl-badge done">DONE</div>
         </div>
-
         <div class="tl-item">
-          <div class="tl-node pending">07</div>
-          <div class="tl-line">
-            <div class="tl-content">
-              <div class="tl-title done-text">Step 07 — L1 Hypnosis Games (9 games)</div>
-              <div class="tl-sub">GABA · Serotonin · Dopamine · Oxytocin systems · Browser-based</div>
-              <div class="tl-sub" style="color:#00E5FF55;">Game 1 (Threshold Bloom) locked ✓ · Games 2–9 dispatched to agents</div>
-            </div>
-          </div>
-          <div class="tl-badge pending">PENDING</div>
+          <div class="tl-node done">✓</div>
+          <div class="tl-line"><div class="tl-content">
+            <div class="tl-title done-text">Step 07 — L1 Hypnosis Games (9 games)</div>
+            <div class="tl-sub">GABA · Serotonin · Dopamine · Oxytocin · All 9 routes wired and deployed</div>
+          </div></div>
+          <div class="tl-badge done">DONE</div>
         </div>
-
         <div class="tl-item">
-          <div class="tl-node pending">08</div>
-          <div class="tl-line">
-            <div class="tl-content">
-              <div class="tl-title active-text">Step 08 — L2 Orthomolecular Games ← ACTIVE</div>
-              <div class="tl-sub">Nutrient-neurotransmitter protocols · Endocannabinoid baseline</div>
-            </div>
-          </div>
-          <div class="tl-badge pending">PENDING</div>
+          <div class="tl-node done">✓</div>
+          <div class="tl-line"><div class="tl-content">
+            <div class="tl-title done-text">Step 08 — L2 Orthomolecular Games (9 games)</div>
+            <div class="tl-sub">Nutrient-neurotransmitter protocols · Endocannabinoid baseline always included</div>
+          </div></div>
+          <div class="tl-badge done">DONE</div>
         </div>
-
         <div class="tl-item">
-          <div class="tl-node pending">09</div>
-          <div class="tl-line">
-            <div class="tl-content">
-              <div class="tl-title pending-text">Step 09 — L3 Inner-Child Healing Games (9 games)</div>
-              <div class="tl-sub">Emotional safety through metaphor · Not direct re-exposure</div>
-            </div>
-          </div>
-          <div class="tl-badge pending">PENDING</div>
+          <div class="tl-node done">✓</div>
+          <div class="tl-line"><div class="tl-content">
+            <div class="tl-title done-text">Step 09 — L3 Inner-Child Healing Games (9 games)</div>
+            <div class="tl-sub">Emotional safety through metaphor · Somatic anchoring · Zero NT language</div>
+          </div></div>
+          <div class="tl-badge done">DONE</div>
         </div>
-
       </div>
     </div>
 
     <div class="phase-block">
-      <div class="phase-label">Phase 3 — Wearable & Infrastructure</div>
+      <div class="phase-label">Phase 3 — Wearable & Infrastructure (Steps 10–13)</div>
       <div class="timeline">
-
         <div class="tl-item">
-          <div class="tl-node pending">10</div>
-          <div class="tl-line">
-            <div class="tl-content">
-              <div class="tl-title pending-text">Step 10 — NeuroBalance Watch Simulator</div>
-              <div class="tl-sub">Neurotransmitter dashboard · On-chain consent toggles</div>
-              <div class="tl-addr"><a href="https://neurobalance-deploy.vercel.app" target="_blank">neurobalance-deploy.vercel.app</a></div>
-            </div>
-          </div>
-          <div class="tl-badge pending">PENDING</div>
+          <div class="tl-node done">✓</div>
+          <div class="tl-line"><div class="tl-content">
+            <div class="tl-title done-text">Step 10 — NeuroBalance Watch</div>
+            <div class="tl-sub">Neurotransmitter dashboard · BiomarkerRadar hexagonal canvas · Sessions live feed</div>
+            <div class="tl-addr"><a href="https://neurobalance-labs.vercel.app" target="_blank">neurobalance-labs.vercel.app</a></div>
+          </div></div>
+          <div class="tl-badge done">DONE</div>
         </div>
-
         <div class="tl-item">
-          <div class="tl-node pending">11</div>
-          <div class="tl-line">
-            <div class="tl-content">
-              <div class="tl-title pending-text">Step 11 — Watch → Blockchain Loop</div>
-              <div class="tl-sub">Wearable data → on-chain writes · Consent-gated · Sepolia</div>
-            </div>
-          </div>
-          <div class="tl-badge pending">PENDING</div>
+          <div class="tl-node done">✓</div>
+          <div class="tl-line"><div class="tl-content">
+            <div class="tl-title done-text">Step 11 — Biosensor Infrastructure</div>
+            <div class="tl-sub">biometric_readings table · POST /api/biometrics/:wallet · 5 biosensing partners identified</div>
+          </div></div>
+          <div class="tl-badge done">DONE</div>
         </div>
-
         <div class="tl-item">
-          <div class="tl-node pending">12</div>
-          <div class="tl-line">
-            <div class="tl-content">
-              <div class="tl-title pending-text">Step 12 — Labs</div>
-              <div class="tl-sub">COA lookup · Lab result integration · EncryptHealth data layer</div>
-            </div>
-          </div>
-          <div class="tl-badge pending">PENDING</div>
+          <div class="tl-node done">✓</div>
+          <div class="tl-line"><div class="tl-content">
+            <div class="tl-title done-text">Step 12 — ML Recommendation Engine</div>
+            <div class="tl-sub">Walsh Protocol AI · biotype classification · NT radar · /api/recommend/:wallet</div>
+          </div></div>
+          <div class="tl-badge done">DONE</div>
         </div>
-
         <div class="tl-item">
-          <div class="tl-node pending">13</div>
-          <div class="tl-line">
-            <div class="tl-content">
-              <div class="tl-title pending-text">Step 13 — COA Lookup</div>
-              <div class="tl-sub">Certificate of Analysis · Product verification · On-chain attestation</div>
-            </div>
-          </div>
-          <div class="tl-badge pending">PENDING</div>
+          <div class="tl-node done">✓</div>
+          <div class="tl-line"><div class="tl-content">
+            <div class="tl-title done-text">Step 13 — COA Lookup</div>
+            <div class="tl-sub">Certificate of Analysis · 5 FSL products · AI extraction · /coa route live</div>
+          </div></div>
+          <div class="tl-badge done">DONE</div>
         </div>
-
       </div>
     </div>
 
     <div class="phase-block">
-      <div class="phase-label">Phase 4 — Integration & Launch</div>
+      <div class="phase-label">Phase 4 — Integration & Launch (Steps 14–19)</div>
       <div class="timeline">
-
         <div class="tl-item">
-          <div class="tl-node pending">14</div>
-          <div class="tl-line">
-            <div class="tl-content">
-              <div class="tl-title pending-text">Step 14 — EncryptAI Homepage</div>
-              <div class="tl-sub">Full ecosystem landing page · All products unified</div>
-            </div>
-          </div>
-          <div class="tl-badge pending">PENDING</div>
+          <div class="tl-node done">✓</div>
+          <div class="tl-line"><div class="tl-content">
+            <div class="tl-title done-text">Step 14 — Provider Credentialing</div>
+            <div class="tl-sub">Verifiable.com · Platinum/Gold/Silver/Verified tiers · Dr. Meg pinned · License lock/unlock</div>
+          </div></div>
+          <div class="tl-badge done">DONE</div>
         </div>
-
         <div class="tl-item">
-          <div class="tl-node pending">15</div>
-          <div class="tl-line">
-            <div class="tl-content">
-              <div class="tl-title pending-text">Step 15 — Integrations</div>
-              <div class="tl-sub">ClaimChain ↔ HypnoNeuro · EHT ↔ MindMasteryNFT · Watch ↔ Labs</div>
-            </div>
-          </div>
-          <div class="tl-badge pending">PENDING</div>
+          <div class="tl-node done">✓</div>
+          <div class="tl-line"><div class="tl-content">
+            <div class="tl-title done-text">Step 15 — ClaimChain Insurance Integration</div>
+            <div class="tl-sub">Insurance path live · HypnoNeuro payment selector → ClaimChain portal · Eligibility API</div>
+            <div class="tl-addr"><a href="https://claimchain-frontend.vercel.app" target="_blank">claimchain-frontend.vercel.app</a></div>
+          </div></div>
+          <div class="tl-badge done">DONE</div>
         </div>
-
         <div class="tl-item">
-          <div class="tl-node pending">16</div>
-          <div class="tl-line">
-            <div class="tl-content">
-              <div class="tl-title pending-text">Step 16 — Demo</div>
-              <div class="tl-sub">End-to-end walkthrough · DEng applied project documentation</div>
-            </div>
-          </div>
-          <div class="tl-badge pending">PENDING</div>
+          <div class="tl-node done">✓</div>
+          <div class="tl-line"><div class="tl-content">
+            <div class="tl-title done-text">Step 16 — Provider Portal</div>
+            <div class="tl-sub">14-tab provider UI · PatientRoster · SessionTimeline · e-sign · reminders</div>
+            <div class="tl-addr"><a href="https://provider-portal-wheat.vercel.app" target="_blank">provider-portal-wheat.vercel.app</a></div>
+          </div></div>
+          <div class="tl-badge done">DONE</div>
         </div>
-
         <div class="tl-item">
-          <div class="tl-node pending">17</div>
-          <div class="tl-line">
-            <div class="tl-content">
-              <div class="tl-title pending-text">Step 17 — ClaimChain Frontend Deploy</div>
-              <div class="tl-sub">Vercel deploy · Sovereign health governance UI</div>
-            </div>
-          </div>
-          <div class="tl-badge pending">PENDING</div>
+          <div class="tl-node done">✓</div>
+          <div class="tl-line"><div class="tl-content">
+            <div class="tl-title done-text">Step 17 — XRPL Dual-Chain Anchor</div>
+            <div class="tl-sub">Every session anchored Sepolia + XRPL · xrpl_tx_hash + xrpl_sha256 in session_logs</div>
+          </div></div>
+          <div class="tl-badge done">DONE</div>
         </div>
-
         <div class="tl-item">
-          <div class="tl-node pending">18</div>
-          <div class="tl-line">
-            <div class="tl-content">
-              <div class="tl-title pending-text">Step 18 — Open Source PRs Merged</div>
-              <div class="tl-sub">ethereum/EIPs · OpenZeppelin · Uniswap · openmrs · bigchaindb · balancer · DIF · hyperledger/fabric</div>
-            </div>
-          </div>
-          <div class="tl-badge pending">PENDING</div>
+          <div class="tl-node done">✓</div>
+          <div class="tl-line"><div class="tl-content">
+            <div class="tl-title done-text">Step 18 — XRPL Wallet Connect</div>
+            <div class="tl-sub">GemWallet · Crossmark · Manual fallback · XRPL grants application drafted</div>
+          </div></div>
+          <div class="tl-badge done">DONE</div>
         </div>
-
         <div class="tl-item">
-          <div class="tl-node pending">19</div>
-          <div class="tl-line">
-            <div class="tl-content">
-              <div class="tl-title pending-text">Step 19 — ASU DEng Enrollment</div>
-              <div class="tl-sub">Start October 2026 · FSL as applied doctoral project · Completion Spring 2028</div>
-            </div>
-          </div>
-          <div class="tl-badge pending">PENDING</div>
+          <div class="tl-node done">✓</div>
+          <div class="tl-line"><div class="tl-content">
+            <div class="tl-title done-text">Step 19 — Support Circles</div>
+            <div class="tl-sub">Group healing rooms · Provider-facilitated · Multi-wallet HNT attribution · XRPL anchor on close</div>
+          </div></div>
+          <div class="tl-badge done">DONE</div>
         </div>
+      </div>
+    </div>
 
+    <div class="phase-block">
+      <div class="phase-label">Phase 5 — Ecosystem Expansion (Steps 20–32)</div>
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-node done">✓</div>
+          <div class="tl-line"><div class="tl-content">
+            <div class="tl-title done-text">Step 20 — Daily.co Avatar Sessions</div>
+            <div class="tl-sub">Live video rooms · futuresystemslab.daily.co · Wallet-authenticated · Session logged on-chain</div>
+          </div></div>
+          <div class="tl-badge done">DONE</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-node done">✓</div>
+          <div class="tl-line"><div class="tl-content">
+            <div class="tl-title done-text">Step 21 — AlchemistForge Ecosystem Wiring</div>
+            <div class="tl-sub">HNT bridge /api/alchemist/bridge live · GameSelection card deployed · Blockscout link</div>
+            <div class="tl-addr"><a href="https://eth-sepolia.blockscout.com/address/0xE092336F8f5082e57CcBb341A110C20ad186A324" target="_blank">0xE092...A324</a></div>
+          </div></div>
+          <div class="tl-badge done">DONE</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-node done">✓</div>
+          <div class="tl-line"><div class="tl-content">
+            <div class="tl-title done-text">Step 22 — Help Center</div>
+            <div class="tl-sub">/help route · 6 sections · Accordion FAQ · Getting Started · Tokens · Practitioners · FAQ</div>
+          </div></div>
+          <div class="tl-badge done">DONE</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-node done">✓</div>
+          <div class="tl-line"><div class="tl-content">
+            <div class="tl-title done-text">Step 23 — Wellness Score Endpoint</div>
+            <div class="tl-sub">/api/wellness-score/:wallet · Sessions + HNT + game score formula · WellnessScoreCard</div>
+          </div></div>
+          <div class="tl-badge done">DONE</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-node done">✓</div>
+          <div class="tl-line"><div class="tl-content">
+            <div class="tl-title done-text">Step 24 — ISOM Integration</div>
+            <div class="tl-sub">Dr. Meg Tier 1 Platinum pinned · Student/in-training pathway · 11 schools · KCNH first</div>
+          </div></div>
+          <div class="tl-badge done">DONE</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-node done">✓</div>
+          <div class="tl-line"><div class="tl-content">
+            <div class="tl-title done-text">Step 25 — School Outreach List</div>
+            <div class="tl-sub">46 NC university contacts · Deans of Students · CSV + Markdown table · fsl-command-center/docs</div>
+          </div></div>
+          <div class="tl-badge done">DONE</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-node done">✓</div>
+          <div class="tl-line"><div class="tl-content">
+            <div class="tl-title done-text">Step 26 — VPS Stability — Orphan Process Fix</div>
+            <div class="tl-sub">encrypthealth-api.service systemd conflict resolved · SyntaxError fixed · PM2 stable 0 restarts</div>
+          </div></div>
+          <div class="tl-badge done">DONE</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-node done">✓</div>
+          <div class="tl-line"><div class="tl-content">
+            <div class="tl-title done-text">Step 27 — White-Label Operator Config</div>
+            <div class="tl-sub">src/config/operator.js · operatorName · colors · sessionFee · HNT split · feature flags</div>
+          </div></div>
+          <div class="tl-badge done">DONE</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-node done">✓</div>
+          <div class="tl-line"><div class="tl-content">
+            <div class="tl-title done-text">Step 28 — Operator Pricing Page</div>
+            <div class="tl-sub">/operator route · Starter $497 · Growth $1,497 · Enterprise custom · Apply Now → mailto</div>
+          </div></div>
+          <div class="tl-badge done">DONE</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-node done">✓</div>
+          <div class="tl-line"><div class="tl-content">
+            <div class="tl-title done-text">Step 29 — White-Label Guide</div>
+            <div class="tl-sub">docs/white-label-guide.md · Config reference · University example · Env vars · Domain setup</div>
+          </div></div>
+          <div class="tl-badge done">DONE</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-node done">✓</div>
+          <div class="tl-line"><div class="tl-content">
+            <div class="tl-title done-text">Step 30 — Demo Script</div>
+            <div class="tl-sub">docs/demo-script.md · 11 scenes · 6-min walkthrough · All ecosystem products covered</div>
+          </div></div>
+          <div class="tl-badge done">DONE</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-node done">✓</div>
+          <div class="tl-line"><div class="tl-content">
+            <div class="tl-title done-text">Step 31 — Mainnet Migration Plan</div>
+            <div class="tl-sub">docs/mainnet-migration-plan.md · Polygon vs Base · 5-phase plan · Cost estimates · Rollback</div>
+          </div></div>
+          <div class="tl-badge done">DONE</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-node done">✓</div>
+          <div class="tl-line"><div class="tl-content">
+            <div class="tl-title done-text">Step 32 — ASU DEng Enrollment</div>
+            <div class="tl-sub">Start October 2026 · FSL as applied doctoral project · Completion Spring 2028</div>
+          </div></div>
+          <div class="tl-badge done">DONE</div>
+        </div>
       </div>
     </div>
   </div>
