@@ -1,5 +1,5 @@
 {
-  "updated": "2026-03-25",
+  "updated": "2026-03-31",
   "projects": {
     "hypnoneuro": {
       "title": "\ud83e\udde0 HypnoNeuro",
@@ -99,7 +99,7 @@
     "encrypthealth": {
       "title": "\ud83d\udd10 EncryptHealth",
       "status": "live",
-      "summary": "Sovereign wellness data platform. All 19 steps complete. 7/7 API health check green. Provider portal, biosensor infrastructure, ML prediction layer all live.",
+      "summary": "Sovereign wellness data platform. Insurance Navigator + Wellness Sovereignty Center live. Patient portal, provider portal, mood tracker, nutrition journal all deployed. Onboarding funnel with LocationGate routing.",
       "completed": [
         "EncryptHealthToken (EHT) deployed",
         "EncryptAI monorepo scaffolded (Step 1)",
@@ -142,13 +142,20 @@
         "AlchemistForge HNT bridge \u2014 /api/alchemist/bridge, session integration",
         "ClaimChain insurance path confirmed live",
         "Provider portal deployed \u2014 provider-portal-wheat.vercel.app",
-        "NeuroBalance Watch redeployed \u2014 neurobalance-labs.vercel.app"
+        "NeuroBalance Watch redeployed \u2014 neurobalance-labs.vercel.app",
+        "Sprint A \u2014 Onboarding flow, Dashboard, Insurance Navigator, Wellness Sovereignty Center, LocationGate funnel",
+        "Sprint B \u2014 Patient portal: dashboard, records, providers, settings (wallet-gated)",
+        "Sprint C \u2014 Mood Tracker + Nutrition Journal components with localStorage persistence",
+        "Sprint D \u2014 Provider portal: dashboard, patients, records, settings (ClaimChain anchor)",
+        "Sprint E \u2014 Wired features into dashboard, Command Center update, production deploy"
       ],
       "next": [
         "End-to-end payment test \u2014 crypto path through ClaimChain",
         "Virtual avatar session rooms \u2014 WebRTC + wallet-connected",
         "Wire VERIFIABLE_API_KEY to VPS environment",
-        "Submit XRPL grants application after March 17 SEC review"
+        "Submit XRPL grants application after SEC review",
+        "Real provider onboarding \u2014 credential verification flow",
+        "Biometric data integration with NeuroBalance Watch"
       ],
       "links": [
         {
@@ -268,7 +275,7 @@
     "fsl_command_center": {
       "title": "\u26a1 FSL Command Center",
       "status": "live",
-      "summary": "Ecosystem dashboard. status.json-driven. All 22 steps tracked. Fully current as of 2026-03-23.",
+      "summary": "Ecosystem dashboard. status.json-driven. All projects tracked. Fully current as of 2026-03-31.",
       "completed": [
         "v3 live with status.json-driven cards",
         "22-step tracker active",
